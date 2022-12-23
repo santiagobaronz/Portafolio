@@ -1,0 +1,21 @@
+{
+  "name": "portafolio_santiago_baron_zuleta",
+  "version": "1.0.0",
+  "description": "This is my portfolio",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss ./src/tailwind.css -o ./public/css/main.css --watch",
+    "build": "NODE_ENV=production postcss ./src/tailwind.css -o ./public/css/main.css"
+  },
+  "keywords": [
+    "Portfolio"
+  ],
+  "author": "Santiago Baron Zuleta",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.2.4",
+    "win-node-env": "^0.6.1"
+  }
+}
