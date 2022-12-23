@@ -472,8 +472,8 @@ video {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 4rem;
-  padding-left: 4rem;
+  padding-right: 5.2rem;
+  padding-left: 5.2rem;
 }
 @media (min-width: 425px) {
 
@@ -499,60 +499,79 @@ video {
     max-width: 1220px;
   }
 }
-.m-10 {
-  margin: 2.5rem;
+.-m-1 {
+  margin: -0.25rem;
 }
-.mr-20 {
-  margin-right: 5rem;
-}
-.mr-12 {
-  margin-right: 3rem;
+.mb-32 {
+  margin-bottom: 8rem;
 }
 .ml-12 {
   margin-left: 3rem;
 }
+.mb-9 {
+  margin-bottom: 2.25rem;
+}
+.mb-7 {
+  margin-bottom: 1.75rem;
+}
+.mt-6 {
+  margin-top: 1.5rem;
+}
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
 .flex {
   display: flex;
 }
-.w-20 {
-  width: 5rem;
+.h-16 {
+  height: 4rem;
 }
-.w-80 {
-  width: 20rem;
+.h-6 {
+  height: 1.5rem;
 }
-.w-5 {
-  width: 1.25rem;
+.w-48 {
+  width: 12rem;
 }
-.w-10 {
-  width: 2.5rem;
+.w-16 {
+  width: 4rem;
 }
-.w-40 {
-  width: 10rem;
-}
-.w-60 {
-  width: 15rem;
-}
-.w-screen {
-  width: 100vw;
+.w-6 {
+  width: 1.5rem;
 }
 .max-w-2xl {
   max-width: 42rem;
 }
-.flex-initial {
-  flex: 0 1 auto;
-}
-.flex-1 {
-  flex: 1 1 0%;
-}
 .flex-auto {
   flex: 1 1 auto;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.items-center {
+  align-items: center;
 }
 .justify-end {
   justify-content: flex-end;
 }
+.gap-6 {
+  gap: 1.5rem;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+.rounded-full {
+  border-radius: 9999px;
+}
 .border-black-700 {
   --tw-border-opacity: 1;
   border-color: rgb(37 37 37 / var(--tw-border-opacity));
+}
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(244 244 245 / var(--tw-border-opacity));
 }
 .bg-black-900 {
   --tw-bg-opacity: 1;
@@ -562,29 +581,84 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
+.fill-black-500 {
+  fill: #666666;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-1 {
+  padding: 0.25rem;
+}
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
 .font-poppins {
   font-family: system-ui;
 }
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.font-normal {
+  font-weight: 400;
 }
 .font-bold {
   font-weight: 700;
 }
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
 .text-white {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(244 244 245 / var(--tw-text-opacity));
+}
+.text-black-300 {
+  --tw-text-opacity: 1;
+  color: rgb(164 164 164 / var(--tw-text-opacity));
+}
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.border-1{
+    border: 1px solid;
+}
 
 .border-x-1 {
     border-left-width: 1px;
     border-right-width: 1px;
 }
 
-.first-letter\:text-green::first-letter {
-  --tw-text-opacity: 1;
-  color: rgb(21 145 132 / var(--tw-text-opacity));
+.text-base-main {
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+.line-hight-fixed{
+    line-height: 3.5rem;
+}
+
+.group:hover .group-hover\:fill-black-200 {
+  fill: #c8c8c8;
 }

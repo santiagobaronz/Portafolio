@@ -4,7 +4,20 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+.border-1{
+    border: 1px solid;
+}
+
 .border-x-1 {
     border-left-width: 1px;
     border-right-width: 1px;
+}
+
+.text-base-main {
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+.line-hight-fixed{
+    line-height: 3.5rem;
 }

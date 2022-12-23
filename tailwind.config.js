@@ -12,10 +12,10 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: "4rem"
+      padding: "5.2rem"
     },
     colors: {
-      'white': '#ffffff',
+      'white': '#f4f4f5',
       'green': '#159184',
       'black': {
         '50': '#f7f7f7',
