@@ -31,12 +31,13 @@ connection.connect(error => {
 /***************************************************************
  *                          Routes 
 ***************************************************************/
-var publicPath = path.resolve(__dirname, 'public');
+var publicPath = path.resolve(__dirname, './../public');
+console.log(publicPath)
 app.use(express.static(publicPath));
 
 app.get('/', (req, res) => {
     res.setHeader('Content-type', 'text/html');
-    res.sendFile('index.html', { root: './public/' })
+    res.sendFile('index.html', { root: './../public/' })
 })
 
 /***************************************************************

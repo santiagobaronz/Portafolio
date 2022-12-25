@@ -4,7 +4,7 @@
   "description": "This is my portfolio",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./app.js",
+    "start": "nodemon ./src/app.js",
     "build:css": "postcss ./src/tailwind.css -o ./public/css/main.css --watch",
     "build": "NODE_ENV=production postcss ./src/tailwind.css -o ./public/css/main.css"
   },
