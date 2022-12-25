@@ -12,7 +12,6 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: "5.2rem"
     },
     colors: {
       'white': '#f4f4f5',
