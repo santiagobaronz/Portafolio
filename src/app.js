@@ -40,6 +40,30 @@ app.get('/', (req, res) => {
     res.sendFile('index.html', { root: './../public/' })
 })
 
+app.get('/jobs' , (req, res) => {
+    const sql = 'SELECT * FROM trabajos';
+    connection.query(sql, (error, results) => {
+        if(error) throw error;
+        if(results.length > 0){
+            res.json(results);
+        }else{
+            res.json('no_results')
+        }
+    });
+})
+
+app.get('/studies' , (req, res) => {
+    const sql = 'SELECT * FROM educacion ORDER BY id DESC';
+    connection.query(sql, (error, results) => {
+        if(error) throw error;
+        if(results.length > 0){
+            res.json(results);
+        }else{
+            res.json('no_results')
+        }
+    });
+})
+
 /***************************************************************
  *                          Server
 ***************************************************************/

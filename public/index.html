@@ -28,7 +28,7 @@
             <div class="hidden" id="float-menu">
                 <div class="fixed inset-0 z-50 backdrop-blur-sm bg-black-900/80 opacity-100"
                     aria-hidden="true" data-headlessui-state="open"></div>
-                <div class="fixed inset-x-28 top-8 z-50 origin-top rounded-3xl bg-black-800 p-8 "
+                <div class="fixed inset-x-16 top-8 z-50 origin-top rounded-3xl bg-black-800 p-8"
                     id="menu-box" tabindex="-1" data-headlessui-state="open">
                     <div class="flex flex-row-reverse items-center justify-between">
                         <button aria-label="Close menu"
@@ -227,7 +227,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class=" fill-gray" viewBox="0 0 16 16">
                                 <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z"/>
                             </svg>
-                            <span class="ml-3">Tecnologías que domino</span>
+                            <span class="ml-3">Tecnologías con nivel avanzado</span>
                         </h2>
                         <div>
                             <ul class="flex flex-wrap gap-x-3 gap-y-3">
@@ -259,27 +259,7 @@
                                     class=" stroke-black-600"></path>
                             </svg><span class="ml-3">Trabajos</span></h2>
 
-                        <ol class="mt-6 space-y-4">
-                            <li class="flex gap-4">
-                                <div
-                                    class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-black-700 ring-2 ring-stroke bg-gray-hover">
-                                    <img alt="" src="./assets/latin.png" width="32" height="32" decoding="async" data-nimg="1" class="h-7 w-7" loading="lazy" style="color:transparent">
-                                </div>
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                    <dt class="sr-only">Company</dt>
-                                    <dd class="w-full flex-none text-sm font-medium text-white">Latinamerican Aeronautics</dd>
-                                    <dt class="sr-only">Role</dt>
-                                    <dd class="text-xs text-white">Webmaster</dd>
-                                    <dt class="sr-only">Date</dt>
-                                    <dd class="ml-auto text-xs text-white" aria-label="2019 until Present">
-                                        <time datetime="2019">2019</time> 
-                                        <span aria-hidden="true">—</span>
-                                        <time datetime="2022">Present</time>
-                                    </dd>
-                                </dl>
-                            </li>
-                            
-                        </ol>
+                        <ol class="mt-6 space-y-4" id="jobsList"></ol>
                         <a class="group inline-flex items-center gap-2 justify-center rounded-md py-3 px-3 text-sm outline-offset-2 transition active:transition-none bg-gray-hover font-medium text-black-200 hover:text-white hover:bg-black-700 mt-6 w-full"
                             href="/#">Descargar CV
                             <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"
@@ -296,24 +276,7 @@
                                 <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
                             </svg><span class="ml-3">Educación</span></h2>
 
-                        <ol class="mt-6 space-y-4">
-                            <li class="flex gap-4">
-                                <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-black-700 ring-2 ring-stroke bg-gray-hover">
-                                    <img alt="" src="./assets/ud.png" width="32" height="32" decoding="async" data-nimg="1" class="h-7 w-7" loading="lazy" style="color:transparent">
-                                </div>
-                                <dl class="flex flex-auto flex-wrap gap-x-2">
-                                    <dt class="sr-only">Degree</dt>
-                                    <dd class="w-full flex-none text-sm font-medium text-white">Ingeniería en Sistemas</dd>
-                                    <dt class="sr-only">Educational institution</dt>
-                                    <dd class="text-xs text-white">Universidad Distrital FJC</dd>
-                                    <dt class="sr-only">Date</dt>
-                                    <dd class="ml-auto text-xs text-white" aria-label="2019 until Present">
-                                        <time datetime="2019">2021</time> 
-                                        <span aria-hidden="true">—</span>
-                                        <time datetime="2022">Present</time>
-                                    </dd>
-                                </dl>
-                            </li>
+                        <ol class="mt-6 space-y-4" id="studiesList">
                         </ol>
                     </div>
                 </div>
@@ -337,6 +300,6 @@
             </div>
         </div>
     </div>
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" type="module"></script>
 </body> <!-- https://imgur.com/a/asnXqhm -->
 </html>

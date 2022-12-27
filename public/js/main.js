@@ -1,29 +1,11 @@
+import { fillJobs } from "./modules/fillJobs.js";
+import { fillStudies } from "./modules/fillStudies.js";
+import { menuSettings } from "./modules/menuSettings.js"
+
 window.addEventListener("load", () => {
-
-    const menuButton = document.querySelector("#menu-button");
-    const floatMenu = document.querySelector("#float-menu");
-    const closeMenu = document.querySelector("#close-menu");
-    const menuBox = document.querySelector("#menu-box");
-
-    closeMenu.addEventListener("click", () => {
-        if(floatMenu.classList.contains("block")){
-            floatMenu.classList.remove("block")
-            floatMenu.classList.add("hidden")
-        }
-    })
-
-    menuButton.addEventListener("click", () => {
-        if(floatMenu.classList.contains("hidden")){
-            floatMenu.classList.remove("hidden")
-            floatMenu.classList.add("block")
-        }
-    })
-
-    floatMenu.addEventListener("click", (event) => {
-        if(event.target != menuBox){
-            floatMenu.classList.remove("block")
-            floatMenu.classList.add("hidden")
-        }
-    })
+    
+    menuSettings();
+    fillJobs();
+    fillStudies();
 
 })
