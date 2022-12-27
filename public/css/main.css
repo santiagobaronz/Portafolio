@@ -643,6 +643,9 @@ video {
 .inline-flex {
   display: inline-flex;
 }
+.table {
+  display: table;
+}
 .grid {
   display: grid;
 }
@@ -987,6 +990,9 @@ video {
 .font-semibold {
   font-weight: 600;
 }
+.italic {
+  font-style: italic;
+}
 .tracking-tight {
   letter-spacing: -0.025em;
 }
@@ -1013,6 +1019,9 @@ video {
 .text-black-200 {
   --tw-text-opacity: 1;
   color: rgb(200 200 200 / var(--tw-text-opacity));
+}
+.underline {
+  text-decoration-line: underline;
 }
 .opacity-100 {
   opacity: 1;

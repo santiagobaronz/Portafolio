@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <title>Santiago Baron Zuleta - Ingeniero en sistemas y desarrollador front-end</title>
+
+    <script src="https://cdn.tiny.cloud/1/3gqz6o07ajzelmqigdqsi3hehf4qt6hbllwsk1q8kbm99l3w/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 
 <body class="container bg-black-800 border-black-700 border-x-1 py-10 p-24 max-md:p-7">
     <header class="flex mb-32 items-center justify-between max-md:block">
+
         <img src="./assets/logo.png" class="w-48 max-md:m-auto max-md:mb-8">
 
         <div class="pointer-events-auto lg:hidden flex max-md:block" data-headlessui-state="open">
@@ -43,8 +46,8 @@
                         <ul
                             class="-my-2 divide-y divide-black-700 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                             <li><a class="block py-3 text-white font-normal cursor-pointer" data-headlessui-state="open" href="/about">Inicio</a></li>
-                            <li><a class="block py-3 text-white font-normal cursor-pointer" data-headlessui-state="open" href="/articles">Sobre mi</a></li>
-                            <li><a class="block py-3 text-white font-normal cursor-pointer" data-headlessui-state="open" href="/projects">Articulos</a></li>
+                            <li><a class="block py-3 text-white font-normal cursor-pointer" data-headlessui-state="open" href="/articles">Sobre mí</a></li>
+                            <li><a class="block py-3 text-white font-normal cursor-pointer" data-headlessui-state="open" href="/projects">Artículos</a></li>
                             <li><a class="block py-3 text-white font-normal cursor-pointer" data-headlessui-state="open" href="/speaking">Proyectos</a></li>
                             <li><a class="block py-3 text-white font-normal text-center border-white border-1 rounded-lg cursor-pointer mt-9" data-headlessui-state="open" href="/uses">Hablemos</a></li>
                         </ul>
@@ -57,14 +60,15 @@
             <nav class="flex-auto">
                 <ul class="flex items-center justify-end">
                     <li class="ml-12 text-white font-normal cursor-pointer">Inicio</li>
-                    <li class="ml-12 text-white font-normal cursor-pointer">Sobre mi</li>
-                    <li class="ml-12 text-white font-normal cursor-pointer">Articulos</li>
+                    <li class="ml-12 text-white font-normal cursor-pointer">Sobre mí</li>
+                    <li class="ml-12 text-white font-normal cursor-pointer">Artículos</li>
                     <li class="ml-12 text-white font-normal cursor-pointer">Proyectos</li>
                     <li class="ml-12 text-white font-normal px-10 py-2 border-white border-1 rounded-lg cursor-pointer">
                         Hablemos</li>
                 </ul>
             </nav>
         </div>
+
     </header>
 
     <main>
@@ -283,23 +287,44 @@
             </div>
         </div>
 
+        <textarea>
+            Welcome to TinyMCE!
+         </textarea>
+         <script>
+           tinymce.init({
+             selector: 'textarea',
+             plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+             toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+             tinycomments_mode: 'embedded',
+             tinycomments_author: 'Author name',
+             mergetags_list: [
+               { value: 'First.Name', title: 'First Name' },
+               { value: 'Email', title: 'Email' },
+             ]
+           });
+         </script>
+
     </main>
 
-    <div class="border-t border-black-700 pt-10 mt-24">
-        <div class="relative px-4 sm:px-8 lg:px-12">
-            <div class="mx-auto max-w-2xl lg:max-w-5xl">
-                <div class="flex flex-col items-center justify-between gap-6 sm:flex-row flex-wrap">
-                    <div class="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200 flex-wrap max-md:gap-x-14">
-                        <a class="transition text-black-300" href="/about">Sobre mi</a>
-                        <a class="transition text-black-300" href="/projects">Articulos</a>
-                        <a class="transition text-black-300" href="/speaking">Proyectos</a>
-                        <a class="transition text-black-300" href="/uses">Hablemos</a>
+    <footer>
+        <div class="border-t border-black-700 pt-10 mt-24">
+            <div class="relative px-4 sm:px-8 lg:px-12">
+                <div class="mx-auto max-w-2xl lg:max-w-5xl">
+                    <div class="flex flex-col items-center justify-between gap-6 sm:flex-row flex-wrap">
+                        <div class="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200 flex-wrap max-md:gap-x-14">
+                            <a class="transition text-black-300" href="/about">Sobre mi</a>
+                            <a class="transition text-black-300" href="/projects">Articulos</a>
+                            <a class="transition text-black-300" href="/speaking">Proyectos</a>
+                            <a class="transition text-black-300" href="/uses">Hablemos</a>
+                        </div>
+                        <p class="text-sm text-gray">© 2022 Santiago Baron. Todos los derechos reservados.</p>
                     </div>
-                    <p class="text-sm text-gray">© 2022 Santiago Baron. Todos los derechos reservados.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
+    
+
     <script src="./js/main.js" type="module"></script>
 </body> <!-- https://imgur.com/a/asnXqhm -->
 </html>
