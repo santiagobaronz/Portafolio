@@ -21,3 +21,15 @@
 .line-hight-fixed{
     line-height: 3.5rem;
 }
+
+body::-webkit-scrollbar{
+    width: 7px;
+    background-color: transparent;
+}
+body::-webkit-scrollbar-track{
+    background-color: #00000;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #252525;
+    border-radius: 5px;
+}

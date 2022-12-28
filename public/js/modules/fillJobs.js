@@ -19,11 +19,8 @@ export const fillJobs = async () => {
             <img alt="" src="${job.logoTrabajo}" width="32" height="32" decoding="async" data-nimg="1" class="h-7 w-7" loading="lazy" style="color:transparent">
         </div>
         <dl class="flex flex-auto flex-wrap gap-x-2">
-            <dt class="sr-only">Company</dt>
             <dd class="w-full flex-none text-sm font-medium text-white">${job.nombreTrabajo}</dd>
-            <dt class="sr-only">Role</dt>
             <dd class="text-xs text-white">${job.cargoTrabajo}</dd>
-            <dt class="sr-only">Date</dt>
             <dd class="ml-auto text-xs text-white" aria-label="${job.fechaInicio} until ${job.fechaFinal}">
                 <time datetime="${job.fechaInicio}">${job.fechaInicio}</time> 
                 <span aria-hidden="true">—</span>
