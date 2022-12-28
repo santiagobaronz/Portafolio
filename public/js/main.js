@@ -1,5 +1,6 @@
 import { fillJobs } from "./modules/fillJobs.js";
 import { fillStudies } from "./modules/fillStudies.js";
+import { menuLinks } from "./modules/menuLinks.js";
 import { menuSettings } from "./modules/menuSettings.js"
 
 window.addEventListener("load", () => {
@@ -7,6 +8,7 @@ window.addEventListener("load", () => {
     menuSettings();
     fillJobs();
     fillStudies();
+    menuLinks();
 
     const getText = document.querySelector("#prueba")
     const boton = document.querySelector("#botonPrueba");

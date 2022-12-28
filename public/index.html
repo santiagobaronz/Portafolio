@@ -14,7 +14,7 @@
 <body class="container bg-black-800 border-black-700 border-x-1 py-10 p-24 max-md:p-7">
     <header class="flex mb-32 items-center justify-between max-md:block">
 
-        <img src="./assets/logo.png" class="w-48 max-md:m-auto max-md:mb-8">
+        <img src="./assets/logo.png" class="w-48 max-md:m-auto max-md:mb-8 home">
 
         <div class="pointer-events-auto lg:hidden flex max-md:block" data-headlessui-state="open">
             <button
@@ -45,9 +45,9 @@
                     <nav class="mt-9">
                         <ul
                             class="-my-2 divide-y divide-black-700 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                            <li><a class="block py-3 text-white font-normal cursor-pointer" data-headlessui-state="open" href="/about">Inicio</a></li>
-                            <li><a class="block py-3 text-white font-normal cursor-pointer" data-headlessui-state="open" href="/articles">Sobre mí</a></li>
-                            <li><a class="block py-3 text-white font-normal cursor-pointer" data-headlessui-state="open" href="/projects">Artículos</a></li>
+                            <li><a class="block py-3 text-white font-normal cursor-pointer home" data-headlessui-state="open">Inicio</a></li>
+                            <li><a class="block py-3 text-white font-normal cursor-pointer about" data-headlessui-state="open">Sobre mí</a></li>
+                            <li><a class="block py-3 text-white font-normal cursor-pointer articles" data-headlessui-state="open">Artículos</a></li>
                             <li><a class="block py-3 text-white font-normal cursor-pointer" data-headlessui-state="open" href="/speaking">Proyectos</a></li>
                             <li><a class="block py-3 text-white font-normal text-center border-white border-1 rounded-lg cursor-pointer mt-9" data-headlessui-state="open" href="/uses">Hablemos</a></li>
                         </ul>
@@ -59,9 +59,9 @@
         <div class="flex-auto max-lg:hidden">
             <nav class="flex-auto">
                 <ul class="flex items-center justify-end">
-                    <li class="ml-12 text-white font-normal cursor-pointer">Inicio</li>
-                    <li class="ml-12 text-white font-normal cursor-pointer">Sobre mí</li>
-                    <li class="ml-12 text-white font-normal cursor-pointer">Artículos</li>
+                    <li class="ml-12 text-white font-normal cursor-pointer home">Inicio</li>
+                    <li class="ml-12 text-white font-normal cursor-pointer about">Sobre mí</li>
+                    <li class="ml-12 text-white font-normal cursor-pointer articles">Artículos</li>
                     <li class="ml-12 text-white font-normal cursor-pointer">Proyectos</li>
                     <li class="ml-12 text-white font-normal px-10 py-2 border-white border-1 rounded-lg cursor-pointer">
                         Hablemos</li>
@@ -72,7 +72,7 @@
     </header>
 
     <main>
-        <div id="home" class="hidden">
+        <div id="home" class="section">
             <div class="max-w-2xl max-md:w-min">
                 <img src="./assets/fotomia.jpeg" sizes="4rem" class="w-16 h-16 rounded-full object-cover mb-9">
                 <h1 class="text-white font-bold text-5xl tracking-tight line-hight-fixed mb-7">Ingeniero en sistemas y
@@ -264,7 +264,9 @@
                                         class=" stroke-black-600"></path>
                                 </svg><span class="ml-3">Trabajos</span></h2>
     
-                            <ol class="mt-6 space-y-4" id="jobsList"></ol>
+                            <ol class="mt-6 space-y-4" id="jobsList">
+                                
+                            </ol>
                             <a class="group inline-flex items-center gap-2 justify-center rounded-md py-3 px-3 text-sm outline-offset-2 transition active:transition-none bg-gray-hover font-medium text-black-200 hover:text-white hover:bg-black-700 mt-6 w-full"
                                 href="/#">Descargar CV
                                 <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"
@@ -289,7 +291,7 @@
             </div>
         </div>
         
-        <div id="about">
+        <div id="about" class="section hidden">
             <div class="mx-auto max-w-2xl lg:max-w-5xl">
                 <div class="grid grid-cols-2 gap-y-16 max-lg:grid-cols-1">
                     <div>
@@ -369,11 +371,6 @@
                             </ul>
                         </div>
                     </div>
-
-
-
-
-
                     <ul class="mt-7 p-10 border border-black-700 rounded-xl max-lg:block lg:hidden">
                         <p class="text-white font-medium pb-9">Mis redes sociales:</p>
                         <li class="flex">
@@ -428,24 +425,6 @@
                             </a>
                         </li>
                     </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    
-                    
                 </div>
             </div>
         </div>
@@ -497,9 +476,9 @@
                 <div class="mx-auto max-w-2xl lg:max-w-5xl">
                     <div class="flex flex-col items-center justify-between gap-6 sm:flex-row flex-wrap">
                         <div class="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200 flex-wrap max-md:gap-x-14">
-                            <a class="transition text-black-300" href="/about">Sobre mi</a>
-                            <a class="transition text-black-300" href="/projects">Articulos</a>
-                            <a class="transition text-black-300" href="/speaking">Proyectos</a>
+                            <a class="transition text-black-300 about">Sobre mi</a>
+                            <a class="transition text-black-300 articles">Articulos</a>
+                            <a class="transition text-black-300">Proyectos</a>
                             <a class="transition text-black-300" href="/uses">Hablemos</a>
                         </div>
                         <p class="text-sm text-gray">© 2022 Santiago Baron. Todos los derechos reservados.</p>

@@ -68,5 +68,5 @@ app.get('/studies' , (req, res) => {
  *                          Server
 ***************************************************************/
 
-const port = process.env.port || 2020;
+const port = process.env.port || 8080;
 app.listen(port, () => console.log(`Escuchando en el puerto ${port}...`));
