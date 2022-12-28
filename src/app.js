@@ -7,6 +7,9 @@ require('dotenv').config({path:'./.env'})
 
 const app = express();
 
+var publicPath = path.resolve(__dirname, './../public');
+app.use(express.static(publicPath));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./'));
@@ -31,9 +34,7 @@ connection.connect(error => {
 /***************************************************************
  *                          Routes 
 ***************************************************************/
-var publicPath = path.resolve(__dirname, './../public');
-console.log(publicPath)
-app.use(express.static(publicPath));
+
 
 app.get('/', (req, res) => {
     res.setHeader('Content-type', 'text/html');
@@ -64,9 +65,21 @@ app.get('/studies' , (req, res) => {
     });
 })
 
+app.get('/articles' , (req, res) => {
+    const sql = 'SELECT * FROM articulos ORDER BY id DESC';
+    connection.query(sql, (error, results) => {
+        if(error) throw error;
+        if(results.length > 0){
+            res.json(results);
+        }else{
+            res.json('no_results')
+        }
+    });
+})
+
 /***************************************************************
  *                          Server
 ***************************************************************/
 
-const port = process.env.port || 8080;
+const port = process.env.port || 2020;
 app.listen(port, () => console.log(`Escuchando en el puerto ${port}...`));
