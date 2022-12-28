@@ -497,17 +497,6 @@ video {
     max-width: 1220px;
   }
 }
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
 .pointer-events-auto {
   pointer-events: auto;
 }
@@ -547,6 +536,30 @@ video {
 }
 .left-0 {
   left: 0px;
+}
+.left-2 {
+  left: 0.5rem;
+}
+.left-24 {
+  left: 6rem;
+}
+.-left-24 {
+  left: -6rem;
+}
+.top-0 {
+  top: 0px;
+}
+.-left-96 {
+  left: -24rem;
+}
+.-left-64 {
+  left: -16rem;
+}
+.-left-72 {
+  left: -18rem;
+}
+.left-72 {
+  left: 18rem;
 }
 .z-50 {
   z-index: 50;
@@ -634,12 +647,6 @@ video {
 .mt-24 {
   margin-top: 6rem;
 }
-.mt-1 {
-  margin-top: 0.25rem;
-}
-.ml-auto {
-  margin-left: auto;
-}
 .block {
   display: block;
 }
@@ -664,20 +671,14 @@ video {
 .h-6 {
   height: 1.5rem;
 }
-.h-16 {
-  height: 4rem;
+.h-32 {
+  height: 8rem;
 }
 .h-4 {
   height: 1rem;
 }
 .h-5 {
   height: 1.25rem;
-}
-.h-10 {
-  height: 2.5rem;
-}
-.h-7 {
-  height: 1.75rem;
 }
 .w-48 {
   width: 12rem;
@@ -688,8 +689,11 @@ video {
 .w-6 {
   width: 1.5rem;
 }
-.w-16 {
-  width: 4rem;
+.w-1\/3 {
+  width: 33.333333%;
+}
+.w-32 {
+  width: 8rem;
 }
 .w-96 {
   width: 24rem;
@@ -706,11 +710,8 @@ video {
 .w-full {
   width: 100%;
 }
-.w-10 {
-  width: 2.5rem;
-}
-.w-7 {
-  width: 1.75rem;
+.max-w-3xl {
+  max-width: 48rem;
 }
 .max-w-2xl {
   max-width: 42rem;
@@ -734,6 +735,21 @@ video {
 .scale-95 {
   --tw-scale-x: .95;
   --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.scale-50 {
+  --tw-scale-x: .5;
+  --tw-scale-y: .5;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.scale-75 {
+  --tw-scale-x: .75;
+  --tw-scale-y: .75;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-scale-50 {
+  --tw-scale-x: -.5;
+  --tw-scale-y: -.5;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .cursor-pointer {
@@ -781,8 +797,9 @@ video {
 .gap-2 {
   gap: 0.5rem;
 }
-.gap-4 {
-  gap: 1rem;
+.gap-x-10 {
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
 }
 .gap-y-20 {
   row-gap: 5rem;
@@ -796,10 +813,6 @@ video {
 }
 .gap-y-16 {
   row-gap: 4rem;
-}
-.gap-x-2 {
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
 }
 .space-y-10 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -824,6 +837,12 @@ video {
 .divide-black-700 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(37 37 37 / var(--tw-divide-opacity));
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-scroll {
+  overflow: scroll;
 }
 .rounded-full {
   border-radius: 9999px;
@@ -988,10 +1007,6 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
 .font-medium {
   font-weight: 500;
 }
@@ -1046,6 +1061,15 @@ video {
 .opacity-0 {
   opacity: 0;
 }
+.opacity-5 {
+  opacity: 0.05;
+}
+.opacity-40 {
+  opacity: 0.4;
+}
+.opacity-60 {
+  opacity: 0.6;
+}
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -1056,8 +1080,8 @@ video {
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.shadow-black-700 {
-  --tw-shadow-color: #252525;
+.shadow-black-900\/50 {
+  --tw-shadow-color: rgb(0 0 0 / 0.5);
   --tw-shadow: var(--tw-shadow-colored);
 }
 .outline-offset-2 {
