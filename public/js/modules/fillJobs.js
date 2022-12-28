@@ -4,7 +4,7 @@ export const fillJobs = async () => {
 
     let jobsArray = [];
 
-    await fetch('/jobs')
+    await fetch('/api/jobs')
     .then(data => data.json())
     .then(data => jobsArray = data)
 

@@ -4,7 +4,7 @@ export const fillStudies = async () => {
 
     let studiesArray = [];
 
-    await fetch('/studies')
+    await fetch('/api/studies')
     .then(data => data.json())
     .then(data => studiesArray = data)
 

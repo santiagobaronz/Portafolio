@@ -14,7 +14,7 @@
 <body class="container bg-black-800 border-black-700 border-x-1 py-10 p-24 max-md:p-7">
     <header class="flex mb-32 items-center justify-between max-md:block">
 
-        <img src="./assets/logo.png" class="w-48 max-md:m-auto max-md:mb-8 home">
+        <img src="./assets/logo.png" class="w-48 max-md:m-auto max-md:mb-8 home cursor-pointer">
 
         <div class="pointer-events-auto lg:hidden flex max-md:block" data-headlessui-state="open">
             <button
@@ -352,6 +352,24 @@
                     </ul>
                 </div>
             </div>
+        </div>
+
+        <div id="articles" class="section hidden">
+            <div class="max-w-2xl mb-20">
+                <h1 class="text-5xl font-bold tracking-tight text-white  line-hight-fixed">
+                    Explorando el mundo del desarrollo: proyectos, ideas y aprendizajes.
+                </h1>
+                <p class="mt-6 text-base text-black-300">
+                    En esta página encontrarás una recopilación de artículos que he escrito sobre 
+                    mis proyectos de programación, así como sobre los diferentes desafíos que he 
+                    enfrentado a lo largo de mi carrera como desarrollador. Además, incluyo mis 
+                    enfoques y perspectivas sobre el mundo de la tecnología y cómo está evolucionando.
+                </p>
+            </div>
+            <div class="md:border-l md:border-black-700 md:pl-6 md:dark:border-zinc-700/40">
+                <div class="flex max-w-3xl flex-col space-y-16" id="articleFullList"></div>
+            </div>
+
         </div>
 
 
