@@ -638,6 +638,12 @@ video {
 .mb-10 {
   margin-bottom: 2.5rem;
 }
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mb-16 {
+  margin-bottom: 4rem;
+}
 .block {
   display: block;
 }
@@ -1266,6 +1272,11 @@ body::-webkit-scrollbar-thumb{
     width: 100%;
   }
 
+  .max-lg\:w-min {
+    width: -moz-min-content;
+    width: min-content;
+  }
+
   .max-lg\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -1303,6 +1314,10 @@ body::-webkit-scrollbar-thumb{
     width: 10rem;
   }
 
+  .max-md\:w-1\/3 {
+    width: 33.333333%;
+  }
+
   .max-md\:gap-x-14 {
     -moz-column-gap: 3.5rem;
          column-gap: 3.5rem;
@@ -1320,6 +1335,10 @@ body::-webkit-scrollbar-thumb{
     right: -1.5rem;
   }
 
+  .sm\:w-full {
+    width: 100%;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -1331,6 +1350,25 @@ body::-webkit-scrollbar-thumb{
   .sm\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}
+
+@media (min-width: 700px) {
+
+  .md\:mb-32 {
+    margin-bottom: 8rem;
+  }
+
+  .md\:mb-9 {
+    margin-bottom: 2.25rem;
+  }
+
+  .md\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
+  .md\:w-1\/3 {
+    width: 33.333333%;
   }
 }
 
@@ -1350,6 +1388,15 @@ body::-webkit-scrollbar-thumb{
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:w-full {
+    width: 100%;
+  }
+
+  .lg\:w-min {
+    width: -moz-min-content;
+    width: min-content;
   }
 
   .lg\:max-w-5xl {
