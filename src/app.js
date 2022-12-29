@@ -48,6 +48,25 @@ app.get('/:page', (req, res) => {
     res.sendFile('index.html', options)
 })
 
+app.get('/articles/:articleName', (req, res) => {
+    
+    let {articleName} = req.params
+
+    const sql = 'SELECT * FROM articulos';
+    connection.query(sql, (error, results) => {
+        if(error) throw error;
+        if(results.length > 0){ 
+            results.forEach(article => {
+                let articleTitle = article.titulo_articulo.toLowerCase().replace(/ /g, "-")
+                if(articleName == articleTitle){
+                    res.json(article);
+                }
+            });
+        }
+    });
+
+})
+
 app.get('/api/jobs' , (req, res) => {
     const sql = 'SELECT * FROM trabajos';
     connection.query(sql, (error, results) => {

@@ -8,17 +8,14 @@
     <link rel="stylesheet" href="./css/main.css?1">
     <title>Santiago Baron Zuleta - Ingeniero en sistemas y desarrollador front-end</title>
     <meta http-equiv="Expires" content="0">
-    <meta http-equiv="Last-Modified" content="0">
-    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-    <meta http-equiv="Pragma" content="no-cache">
 
     <script src="https://cdn.tiny.cloud/1/3gqz6o07ajzelmqigdqsi3hehf4qt6hbllwsk1q8kbm99l3w/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 
-<body class="container bg-black-800 border-black-700 border-x-1 py-10 p-24 max-md:p-7">
+<body class="container bg-black-800 border-black-700 border-x-1 py-10 p-24 max-md:p-7 min-h-screen">
     <header class="flex mb-32 items-center justify-between max-md:block">
 
-        <img src="./assets/logo.png" class="w-48 max-md:m-auto max-md:mb-8 home cursor-pointer">
+        <a href="/"><img src="./assets/logo.png" class="w-48 max-md:m-auto max-md:mb-8 home cursor-pointer"></a>
 
         <div class="pointer-events-auto lg:hidden flex max-md:block" data-headlessui-state="open">
             <button
@@ -63,9 +60,9 @@
         <div class="flex-auto max-lg:hidden">
             <nav class="flex-auto">
                 <ul class="flex items-center justify-end">
-                    <li class="ml-12 text-white font-medium cursor-pointer home">Inicio</li>
-                    <li class="ml-12 text-white font-medium cursor-pointer about">Sobre mí</li>
-                    <li class="ml-12 text-white font-medium cursor-pointer articles">Artículos</li>
+                    <li class="ml-12 text-white font-medium cursor-pointer home"><a href="/">Inicio</a></li>
+                    <li class="ml-12 text-white font-medium cursor-pointer about"><a href="/about">Sobre mí</a></li>
+                    <li class="ml-12 text-white font-medium cursor-pointer articles"><a href="/articles">Artículos</a></li>
                     <li class="ml-12 text-white font-medium cursor-pointer">Proyectos</li>
                     <li class="ml-12 text-white font-medium px-10 py-2 border-white border-1 rounded-lg cursor-pointer">
                         Hablemos</li>
@@ -76,14 +73,14 @@
     </header>
 
     <main>
-        <div id="home" class="section">
+        <div id="home" class="section hidden">
             <div class="max-w-3xl max-md:w-min">
                 <div class="flex gap-x-10 max-lg:block">
                     <div class="w-1/3 max-lg:w-full">
                         <img src="./assets/fotomia.jpeg" class="w-32 h-32 rounded-full object-cover mb-9 shadow-lg shadow-black-900/50 ring-2 ring-stroke">
                     </div>
                     <h1 class="max-lg:w-full text-white font-bold text-5xl tracking-tight line-hight-fixed mb-7">Ingeniero en sistemas y
-                        desarrollador front-end </h1>
+                        desarrollador full-stack </h1>
                 </div>
                 <p class="text-black-300 text-base-main mb-8">Soy Santiago Baron, un ingeniero en sistemas residente en
                     Bogotá, Colombia. Soy un
@@ -141,9 +138,9 @@
     
             <div class="mt-11 mb-24">
                 <h2 class="text-white font-semibold text-xl mb-12">Mis proyectos más recientes</h2>
-                <div class="grid grid-cols-2 gap-4 max-lg:block ">
-                    <img class="rounded-xl cursor-pointer hover:translate-x-0.5 hover:-translate-y-0.5 transition-all max-lg:mb-6" src="./assets/one.jpg" alt="">
-                    <img class="rounded-xl cursor-pointer hover:translate-x-0.5 hover:-translate-y-0.5 transition-all" src="./assets/two.jpg" alt="">
+                <div class="grid grid-cols-2 gap-8 max-lg:block ">
+                    <img class="rounded-xl cursor-pointer hover:shadow-2xl hover:translate-x-0.5 hover:-translate-y-0.5 transition-all max-lg:mb-6" src="./assets/one.jpg" alt="">
+                    <img class="rounded-xl cursor-pointer hover:shadow-2xl hover:translate-x-0.5 hover:-translate-y-0.5 transition-all" src="./assets/two.jpg" alt="">
                 </div>
             </div>
     
@@ -370,13 +367,15 @@
                     enfoques y perspectivas sobre el mundo de la tecnología y cómo está evolucionando.
                 </p>
             </div>
-            <div class="md:border-l md:border-black-700 md:pl-6 md:dark:border-zinc-700/40">
-                <div class="flex max-w-3xl flex-col space-y-16" id="articleFullList"></div>
+            <div class="lg:border-l lg:border-black-700 lg:pl-6 ">
+                <div class="flex max-w-3xl flex-col space-y-16" id="articleFullList">
+                    <!--<article class="lg:grid lg:grid-cols-4 lg:items-baseline"> <div class="lg:col-span-3 group relative flex flex-col items-start"> <h2 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100"> <div class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-gray-hover opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"> </div><a href="/articles/${articleName}"><span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span><span class="relative z-10 text-white">Cómo estoy creando mi portafolio de programador web Full-stack</span></a> </h2> <time class="lg:hidden relative z-10 order-first mb-3 flex items-center text-sm text-black-300 pl-3.5" datetime="${article.fecha_date}"> <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true"> <span class="h-4 w-0.5 rounded-full bg-gray"></span> </span>Diciembre 28, 2022</time> <p class="relative z-10 mt-2 text-sm text-gray">Un portafolio web es esencial para mostrar tus habilidades y proyectos a potenciales empleadores y destacarte en el mercado laboral. Muestra tus logros y experiencia y permite a las empresas entender lo que puedes ofrecer. Tener un portafolio sólido y atractivo es fundamental para conseguir el trabajo de tus sueños.</p> <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500 text-green">Leer articulo <svg viewBox="2 3 9 9" aria-hidden="true" class="ml-1 h-5 w-4 stroke-green fill-none"> <path d="M6.75 5.75 9.25 8l-2.5 2.25"> </path> </svg> </div> </div> <time class="mt-1 hidden relative z-10 order-first mb-3 lg:flex items-center text-sm text-black-300" datetime="2022-09-05">Diciembre 28, 2022 </time> </article>-->
+                </div>
             </div>
 
+            
+
         </div>
-
-
 
 
 
@@ -435,7 +434,6 @@
         </div>
     </footer>
     
-
     <script src="./js/main.js" type="module"></script>
 </body> <!-- https://imgur.com/a/asnXqhm -->
 </html>
