@@ -563,6 +563,10 @@ video {
   margin-left: auto;
   margin-right: auto;
 }
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 .mb-32 {
   margin-bottom: 8rem;
 }
@@ -837,6 +841,11 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+}
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .divide-y > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
@@ -1318,6 +1327,10 @@ body::-webkit-scrollbar-thumb{
     width: 33.333333%;
   }
 
+  .max-md\:justify-between {
+    justify-content: space-between;
+  }
+
   .max-md\:gap-x-14 {
     -moz-column-gap: 3.5rem;
          column-gap: 3.5rem;
@@ -1328,11 +1341,22 @@ body::-webkit-scrollbar-thumb{
   }
 }
 
+@media not all and (min-width: 425px) {
+
+  .max-sm\:flex {
+    display: flex;
+  }
+}
+
 @media (min-width: 425px) {
 
   .sm\:-inset-x-6 {
     left: -1.5rem;
     right: -1.5rem;
+  }
+
+  .sm\:flex {
+    display: flex;
   }
 
   .sm\:w-full {
@@ -1367,8 +1391,16 @@ body::-webkit-scrollbar-thumb{
     margin-bottom: 4rem;
   }
 
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:w-1\/3 {
     width: 33.333333%;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
   }
 }
 
@@ -1399,6 +1431,34 @@ body::-webkit-scrollbar-thumb{
     width: min-content;
   }
 
+  .lg\:w-7 {
+    width: 1.75rem;
+  }
+
+  .lg\:w-6 {
+    width: 1.5rem;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
+  .lg\:w-20 {
+    width: 5rem;
+  }
+
+  .lg\:w-48 {
+    width: 12rem;
+  }
+
+  .lg\:w-56 {
+    width: 14rem;
+  }
+
+  .lg\:w-72 {
+    width: 18rem;
+  }
+
   .lg\:max-w-5xl {
     max-width: 64rem;
   }
@@ -1417,6 +1477,10 @@ body::-webkit-scrollbar-thumb{
 
   .lg\:items-baseline {
     align-items: baseline;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
   }
 
   .lg\:border-l {
@@ -1446,6 +1510,10 @@ body::-webkit-scrollbar-thumb{
 
   .xl\:relative {
     position: relative;
+  }
+
+  .xl\:block {
+    display: block;
   }
 
   .xl\:pl-24 {
