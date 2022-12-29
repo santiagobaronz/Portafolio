@@ -1008,6 +1008,10 @@ video {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
 .font-medium {
   font-weight: 500;
 }
@@ -1025,6 +1029,9 @@ video {
 }
 .leading-7 {
   line-height: 1.75rem;
+}
+.leading-8 {
+  line-height: 2rem;
 }
 .tracking-tight {
   letter-spacing: -0.025em;
@@ -1284,6 +1291,11 @@ body::-webkit-scrollbar-thumb{
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
+  .sm\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
 }
 @media (min-width: 1024px) {
 
@@ -1346,6 +1358,10 @@ body::-webkit-scrollbar-thumb{
   }
 }
 @media (min-width: 1220px) {
+
+  .xl\:relative {
+    position: relative;
+  }
 
   .xl\:pl-24 {
     padding-left: 6rem;

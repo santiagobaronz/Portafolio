@@ -59,12 +59,35 @@ app.get('/articles/:articleName', (req, res) => {
             results.forEach(article => {
                 let articleTitle = article.titulo_articulo.toLowerCase().replace(/ /g, "-")
                 if(articleName == articleTitle){
-                    res.json(article);
+                    var options = {
+                        root: './public/',
+                        headers: {
+                            'page': 'articleUnitary',
+                            'idArticle': article.id
+                        }
+                    }
+                    res.setHeader('Content-type', 'text/html');
+                    res.sendFile('index.html', options)
                 }
             });
         }
     });
+})
 
+app.get('/articles/library/:articleId', (req, res) => {
+    
+    let {articleId} = req.params
+
+    const sql = `SELECT * FROM articulos WHERE id = ${articleId}`;
+    connection.query(sql, (error, results) => {
+        if(error) throw error;
+        if(results.length > 0){ 
+            console.log(results)
+            res.json(results);
+        }else{
+            res.json('no_results')
+        }
+    });
 })
 
 app.get('/api/jobs' , (req, res) => {

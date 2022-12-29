@@ -1,12 +1,12 @@
-import { getHeaders } from "./getHeaders.js";
+import { getHeaderArticle, getHeaderPage } from "./getHeaders.js";
 
 export const menuLinks = () => {
 
     const sections = document.querySelectorAll(".section");
     
     const showSectionByLink = () => {
+        const sectionToShow = getHeaderPage();
         sections.forEach(section => {
-            const sectionToShow = getHeaders();
             if(section.id != sectionToShow){
                 section.classList.add("hidden")
                 section.classList.remove("block")
@@ -21,6 +21,31 @@ export const menuLinks = () => {
                         case "articles":
                             document.title = "Artículos - Santiago Baron Zuleta";
                             break;
+                        case "articleunitary":
+
+                            const idArticle = getHeaderArticle();
+                            const articleTitle = document.querySelector("#article_title");
+                            const articleDate = document.querySelector("#article_date");
+                            const articleContent = document.querySelector("#article_content");
+
+                            fetch(`/articles/library/${idArticle}`)
+                            .then(data => data.json())
+                            .then(data => {
+
+                                articleTitle.innerHTML = data[0].titulo_articulo;
+                                articleDate.innerHTML = data[0].fecha_texto;
+                                articleContent.innerHTML = data[0].texto_articulo;
+
+
+
+
+                            })
+
+
+
+
+                            break;
+
                     }
                 }
             }
