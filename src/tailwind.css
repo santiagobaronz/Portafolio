@@ -33,3 +33,32 @@ body::-webkit-scrollbar-thumb{
     background-color: #252525;
     border-radius: 5px;
 }
+
+.articleText *{
+    margin-bottom: 25px;
+}
+
+.articleText p{
+    color: #a4a4a4;
+}
+
+.articleText img{
+    border-radius: 1.5rem;
+}
+
+.articleText a {
+    color: #159184;
+    font-weight: 500;
+}
+
+.articleText pre {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    margin: 25px 0;
+    border-radius: 1.5rem;
+    background-color:#0e0e10;
+    border: 1px solid #252525;
+    color: #f4f4f5;
+  }
+
+
