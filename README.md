@@ -13,6 +13,7 @@ On this website you will find my portfolio with my contact details and my projec
 - NodeJS
 - Tailwind CSS
 - MySQL
+- TinyMCE
 
 ## Author 🦸‍♀️
 
