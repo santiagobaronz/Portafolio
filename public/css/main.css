@@ -968,6 +968,10 @@ video {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
+.px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -987,10 +991,6 @@ video {
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
-.px-24 {
-  padding-left: 6rem;
-  padding-right: 6rem;
 }
 .pt-10 {
   padding-top: 2.5rem;
@@ -1218,6 +1218,14 @@ body::-webkit-scrollbar-thumb{
     border: 1px solid #252525;
     color: #f4f4f5;
   }
+
+.swal2-button{
+    background-color: #000000 !important;
+}
+
+.swal2-button:focus{
+    box-shadow: 0 0 0 3px rgba(20, 20, 20, 0.5) !important;
+}
 
 .hover\:translate-x-0\.5:hover {
   --tw-translate-x: 0.125rem;
@@ -1493,5 +1501,3 @@ body::-webkit-scrollbar-thumb{
     padding-left: 6rem;
   }
 }
-
-

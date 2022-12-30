@@ -61,4 +61,10 @@ body::-webkit-scrollbar-thumb{
     color: #f4f4f5;
   }
 
+.swal2-button{
+    background-color: #000000 !important;
+}
 
+.swal2-button:focus{
+    box-shadow: 0 0 0 3px rgba(20, 20, 20, 0.5) !important;
+}
