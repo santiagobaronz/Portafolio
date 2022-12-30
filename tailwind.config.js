@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./public/*.html"],
+  content: ["./public/**/*.{html,js}"],
   theme: {
     fontFamily: {
       'poppins': ['system-ui']

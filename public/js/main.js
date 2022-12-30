@@ -4,14 +4,14 @@ import { fillStudies } from "./modules/fillStudies.js";
 import { menuLinks } from "./modules/menuLinks.js";
 import { menuSettings } from "./modules/menuSettings.js"
 
-window.addEventListener("load", () => {
+window.addEventListener("load", async() => {
     
     menuLinks();
     menuSettings();
     fillJobs();
     fillStudies();
     fillArticles();
-
+    
     const getText = document.querySelector("#prueba")
     const boton = document.querySelector("#botonPrueba");
 
