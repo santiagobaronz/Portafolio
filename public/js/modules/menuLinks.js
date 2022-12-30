@@ -13,6 +13,7 @@ export const menuLinks = () => {
     }
 
     const sections = document.querySelectorAll(".section");
+    const main = document.querySelector("main")
     
     const showSectionByLink = () => {
         const sectionToShow = getHeaderPage();
@@ -61,6 +62,7 @@ export const menuLinks = () => {
                 }
             }
         })
+        main.classList.remove("hidden")
     }
      
     showSectionByLink();
