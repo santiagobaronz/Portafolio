@@ -636,6 +636,9 @@ video {
 .mt-7 {
   margin-top: 1.75rem;
 }
+.ml-2 {
+  margin-left: 0.5rem;
+}
 .block {
   display: block;
 }
@@ -675,11 +678,14 @@ video {
 .h-7 {
   height: 1.75rem;
 }
-.h-full {
-  height: 100%;
-}
 .h-12 {
   height: 3rem;
+}
+.h-8 {
+  height: 2rem;
+}
+.h-full {
+  height: 100%;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -720,6 +726,12 @@ video {
 .w-7 {
   width: 1.75rem;
 }
+.w-12 {
+  width: 3rem;
+}
+.w-8 {
+  width: 2rem;
+}
 .w-auto {
   width: auto;
 }
@@ -731,6 +743,9 @@ video {
 }
 .max-w-xl {
   max-width: 36rem;
+}
+.max-w-full {
+  max-width: 100%;
 }
 .flex-auto {
   flex: 1 1 auto;
@@ -819,6 +834,10 @@ video {
 .gap-y-16 {
   row-gap: 4rem;
 }
+.gap-x-12 {
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
 .space-y-10 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -898,6 +917,10 @@ video {
 .bg-gray {
   --tw-bg-opacity: 1;
   background-color: rgb(101 101 109 / var(--tw-bg-opacity));
+}
+.bg-black-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 37 37 / var(--tw-bg-opacity));
 }
 .bg-black-900\/70 {
   background-color: rgb(0 0 0 / 0.7);
@@ -1123,6 +1146,10 @@ video {
   --tw-shadow-color: #252525;
   --tw-shadow: var(--tw-shadow-colored);
 }
+.shadow-black-800\/50 {
+  --tw-shadow-color: rgb(24 24 27 / 0.5);
+  --tw-shadow: var(--tw-shadow-colored);
+}
 .outline-offset-2 {
   outline-offset: 2px;
 }
@@ -1141,6 +1168,17 @@ video {
 }
 .ring-stroke {
   --tw-ring-color: hsla(240,5%,96%,.1);
+}
+.ring-green {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(21 145 132 / var(--tw-ring-opacity));
+}
+.ring-black-900\/50 {
+  --tw-ring-color: rgb(0 0 0 / 0.5);
+}
+.ring-black-700 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(37 37 37 / var(--tw-ring-opacity));
 }
 .backdrop-blur-sm {
   --tw-backdrop-blur: blur(4px);
@@ -1369,6 +1407,10 @@ body::-webkit-scrollbar-thumb{
     width: 100%;
   }
 
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -1455,6 +1497,10 @@ body::-webkit-scrollbar-thumb{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .lg\:items-baseline {
     align-items: baseline;
   }
@@ -1476,6 +1522,16 @@ body::-webkit-scrollbar-thumb{
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:pl-16 {

@@ -70,6 +70,13 @@ app.get('/articles', (req, res) => {
     res.sendFile('index.html', options)
 })
 
+app.get('/projects', (req, res) => {
+    
+    var options = { root: './public/', headers: { 'page': "projects"}}
+    res.setHeader('Content-type', 'text/html');
+    res.sendFile('index.html', options)
+})
+
 app.get('/404', (req, res) => {
     var options = { root: './public'}
     res.setHeader('Content-type', 'text/html');
@@ -163,6 +170,18 @@ app.get('/api/studies' , (req, res) => {
 
 app.get('/api/articles' , (req, res) => {
     const sql = 'SELECT * FROM articulos ORDER BY id DESC';
+    connection.query(sql, (error, results) => {
+        if(error) throw error;
+        if(results.length > 0){
+            res.json(results);
+        }else{
+            res.json('no_results')
+        }
+    });
+})
+
+app.get('/api/projects' , (req, res) => {
+    const sql = 'SELECT * FROM proyectos ORDER BY id DESC';
     connection.query(sql, (error, results) => {
         if(error) throw error;
         if(results.length > 0){

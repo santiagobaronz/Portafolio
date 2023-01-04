@@ -20,7 +20,8 @@ export const menuLinks = () => {
         sections.forEach(section => {
             if(section.id != sectionToShow){
                 if(sectionToShow != "home" && sectionToShow != "about" && 
-                    sectionToShow != "articles" && sectionToShow != "articleunitary"){
+                    sectionToShow != "articles" && sectionToShow != "articleunitary" &&
+                    sectionToShow != "projects"){
                         window.location.href = "http://localhost:2020/404";
                 }else{
                     section.classList.add("hidden")
@@ -58,6 +59,10 @@ export const menuLinks = () => {
                                 articleContent.innerHTML = data[0].texto_articulo;
                             }
                         })
+                        break;
+                    case "projects":
+                        document.title = "Proyectos - Santiago Baron Zuleta";
+                        disableLink("/projects")
                         break;
                 }
             }
