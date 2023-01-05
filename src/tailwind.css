@@ -68,3 +68,14 @@ body::-webkit-scrollbar-thumb{
 .swal2-button:focus{
     box-shadow: 0 0 0 3px rgba(20, 20, 20, 0.5) !important;
 }
+
+.deployed::before{
+    content: '';
+    background-color: #32d49e;
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
