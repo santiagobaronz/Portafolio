@@ -3,7 +3,6 @@ import { getHeaderArticle, getHeaderPage } from "./getHeaders.js";
 export const menuLinks = () => {
 
     const disableLink = (link) => {
-        console.log(link)
         const options = document.querySelectorAll(".home-link");
         options.forEach(option => {
             if(option.getAttribute('href') == link){

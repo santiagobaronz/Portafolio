@@ -952,6 +952,9 @@ video {
 .fill-black-500 {
   fill: #666666;
 }
+.fill-white {
+  fill: #f4f4f5;
+}
 .stroke-white {
   stroke: #f4f4f5;
 }
