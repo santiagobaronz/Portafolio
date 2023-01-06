@@ -203,6 +203,24 @@ app.get('/admin/login', (req, res) => {
     res.sendFile('login.html', { root: './public/admin' })
 })
 
+app.get('/admin/dashboard', (req, res) => {
+    res.setHeader('Content-type', 'text/html');
+    res.sendFile('dashboard.html', { root: './public/admin' })
+})
+
+app.get('/security', (req, res) => {
+
+    const clientId = parseInt(req.query.clientID);
+
+    if(parseInt(process.env.STAFF_ID) == clientId){
+        res.send(true)
+    }else{
+        res.send(false)
+    }
+})
+
+
+
 app.get('/api/getAccessToken', async (req, res) =>{
 
     const params = "?client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET + "&code=" + req.query.code;
