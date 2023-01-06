@@ -79,3 +79,21 @@ body::-webkit-scrollbar-thumb{
     display: inline-block;
     margin-right: 10px;
 }
+
+
+.tox-tinymce{
+    border: none !important;
+}
+
+.tox-statusbar__branding{
+    display: none;
+}
+
+.tox-statusbar__path-item , .tox-statusbar__wordcount {
+    margin: 0 10px !important;
+    font-size: 12px !important;
+}
+
+.tox .tox-statusbar{
+    height: 35px !important;
+}

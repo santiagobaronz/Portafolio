@@ -212,11 +212,7 @@ app.get('/security', (req, res) => {
 
     const clientId = parseInt(req.query.clientID);
 
-    if(parseInt(process.env.STAFF_ID) == clientId){
-        res.send(true)
-    }else{
-        res.send(false)
-    }
+    (parseInt(process.env.STAFF_ID) == clientId) ? res.send(true) :res.send(false)
 })
 
 
