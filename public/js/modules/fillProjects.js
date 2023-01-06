@@ -59,14 +59,14 @@ export const fillProjects = async () => {
                 objectList.className = "flex flex-wrap w-full bg-gray-hover rounded-xl mb-3 items-center h-20 px-10 hover:translate-x-0.5 hover:-translate-y-0.5 transition-all";
                 objectList.innerHTML = `
 
-                        <div class="w-1/4 flex items-center">
+                        <div class="w-[23%] flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="fill-black-300" viewBox="0 0 16 16">
                                 <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
                               </svg>
                             <p class="font-normal text-md text-white ml-4">${repo.name}</p>
                         </div>
 
-                        <div class="w-1/4 p-2 flex items-center">
+                        <div class="w-[27%] p-2 flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="fill-black-500" viewBox="0 0 16 16">
                                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"/>
                               </svg>
