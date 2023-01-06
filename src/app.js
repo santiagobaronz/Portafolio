@@ -179,6 +179,30 @@ app.get('/api/articles' , (req, res) => {
     });
 })
 
+
+app.post('/api/create/article' , (req, res) => {
+
+    const {title, abstract, content, date} = req.body;
+
+    console.log(title)
+
+    const articleTitle = mysql.escape(title);
+    const articleAbstract = mysql.escape(abstract);
+    const articleContent = mysql.escape(content)
+    const articleDate = mysql.escape(date)
+
+    const sql = 'INSERT INTO articulos (titulo_articulo, resumen_articulo, texto_articulo, fecha_texto, fecha_date) VALUES (?, ?, ?, ?, ?)';
+
+    const params = [title, abstract, content, date, "prueba"];
+    const formattedSql = mysql.format(sql, params);
+    connection.query(formattedSql, (error, results) => {
+        
+    });
+
+    
+
+})
+
 app.get('/api/projects' , (req, res) => {
     const sql = 'SELECT * FROM proyectos ORDER BY id DESC';
     connection.query(sql, (error, results) => {

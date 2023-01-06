@@ -2,6 +2,8 @@
  *                    Dashboard system
 ***************************************************************/
 
+import { getDate } from "./getDate.js";
+
 const data = JSON.parse(sessionStorage.getItem("data"));
 let dataCheck;
 
@@ -18,6 +20,8 @@ if(dataCheck){
     document.querySelector('#githubFollowers').innerHTML = data.followers + '<span class="text-black-300"> seguidores</span>';
     document.querySelector('#githubFollowing').innerHTML = data.following + '<span class="text-black-300"> seguidos</span>';
     document.querySelector('#githubRepos').innerHTML = data.public_repos + '<span class="text-black-300" > repositorios</span>';
+
+    
 
     tinymce.init({
         selector: 'textarea',
@@ -37,11 +41,32 @@ if(dataCheck){
         ]
       });
 
-      function postInitWork()
-        {
-        var editor = tinyMCE.getInstanceById('textarea');
-        editor.getBody().style.backgroundColor = "#FFFF66";
-        }
+      const textField = document.querySelector("#prueba")
+    const sendButton = document.querySelector("#sendButton");
+
+    sendButton.addEventListener("click" , (e) => {
+        e.preventDefault();
+
+        const title = document.querySelector("#title").value
+        const abstract = document.querySelector("#abstract").value
+        const content = tinymce.get("text-editor").getContent();
+        const date = new Date();
+        
+        fetch('/api/create/article', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            'title': title,
+            'abstract': abstract,
+            'content': content,
+            'date': getDate(date.toString())
+          })
+        }).then(response => response.json())
+          .then(data => console.log(data))
+        
+    })
 
 
 
