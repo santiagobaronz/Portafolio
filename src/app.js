@@ -92,7 +92,8 @@ app.get('/articles/:articleName', (req, res) => {
         if(error) throw error;
         if(results.length > 0){ 
             let counter= 0;
-            results.forEach(article => {
+            let checkStatus;
+            results.forEach((article, index) => {
                 let articleTitle = article.titulo_articulo.toLowerCase().replace(/ /g, "-");
                 if(articleName == articleTitle){
                     var options = {
@@ -102,18 +103,16 @@ app.get('/articles/:articleName', (req, res) => {
                             'idArticle': article.id
                         }
                     }
-                    res.setHeader('Content-type', 'text/html');
+                    checkStatus = true;
                     res.sendFile('index.html', options)
                 }else{
                     counter++
                 }
             });
             
-            if(counter > 0){
+            if(counter > 0 && checkStatus == false){
                 var options = {root: './public/',headers: {'page': '404',
                         'content': 'Este artículo no existe o tiene un enlace URL diferente'}}
-                        
-                res.setHeader('Content-type', 'text/html');
                 res.sendFile('index.html', options)
             }
         }
