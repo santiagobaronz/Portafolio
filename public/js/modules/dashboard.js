@@ -15,13 +15,28 @@ if(dataCheck){
 
     console.log(data)
     document.querySelector('#githubPhoto').src = data.avatar_url;
-    document.querySelector('#githubName').innerHTML = data.name;
+    document.querySelector('#githubName').innerHTML = data.name + '<span class="text-black-300 ml-1 text-md"> • (' + data.login + ')</span>';
     document.querySelector('#githubInfo').innerHTML = data.bio;
     document.querySelector('#githubFollowers').innerHTML = data.followers + '<span class="text-black-300"> seguidores</span>';
     document.querySelector('#githubFollowing').innerHTML = data.following + '<span class="text-black-300"> seguidos</span>';
     document.querySelector('#githubRepos').innerHTML = data.public_repos + '<span class="text-black-300" > repositorios</span>';
+	
+	const listArticlesDashboard = document.querySelector('#listArticlesDashboard');
 
-    
+	let articlesArray = [];
+    await fetch('/api/articles')
+    .then(data => data.json())
+    .then(data => articlesArray = data)
+
+	articlesArray.forEach(article => {
+		const listItem = document.createElement('div')
+		listItem.className = 'bg-gray-hover w-full truncate mb-4 text-sm rounded-lg py-2 px-4 text-black-300'
+		listItem.innerHTML = ` <p class='truncate'>${article.titulo_articulo}</p>`
+
+		listArticlesDashboard.append(listItem)
+	});
+
+	
 
     tinymce.init({
         selector: 'textarea',

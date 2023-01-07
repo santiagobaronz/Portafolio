@@ -51,6 +51,11 @@ body::-webkit-scrollbar-thumb{
     font-weight: 500;
 }
 
+.articleText ol li::marker,
+.articleText ul li::marker {
+    color: #159184;
+  }
+
 .articleText pre {
     word-wrap: break-word;
     white-space: pre-wrap;
