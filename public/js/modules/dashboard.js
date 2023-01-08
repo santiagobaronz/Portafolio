@@ -66,21 +66,33 @@ if(dataCheck){
         const abstract = document.querySelector("#abstract").value
         const content = tinymce.get("text-editor").getContent();
         const date = new Date();
-        
-        fetch('/api/create/article', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            'title': title,
-            'abstract': abstract,
-            'content': content,
-            'date': getDate(date.toString())
-          })
-        }).then(response => response.json())
-          .then(data => console.log(data))
-        
+
+        if(title == "" || abstract == "" || content == ""){
+            Swal.fire({
+              icon: 'error',
+              title: 'Se ha producido un problema',
+              text: 'Rellena todos los campos antes de crear el artículo',
+              background: "#18181b",
+              iconColor: '#159184',
+              color: "#FFF",
+              customClass: { confirmButton: "swal2-button" }
+              } 
+          );
+        }else{
+          fetch('/api/create/article', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              'title': title,
+              'abstract': abstract,
+              'content': content,
+              'date': getDate(date.toString())
+            })
+          }).then(response => response.json())
+            .then(data => console.log(data))
+        }        
     })
 
 
