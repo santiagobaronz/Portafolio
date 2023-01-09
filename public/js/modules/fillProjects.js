@@ -10,6 +10,13 @@ export const fillProjects = async () => {
     .then(data => data.json())
     .then(data => projectsArray = data)
 
+    document.querySelector("#imgPrj").src = projectsArray[0].img_proyecto;
+    document.querySelector("#imgPrj2").src = projectsArray[1].img_proyecto;
+    document.querySelector("#imgLink").href = projectsArray[0].link_proyecto;
+    document.querySelector("#imgLink2").href = projectsArray[1].link_proyecto;
+    
+
+    
     projectsArray.forEach(project => {
 
         const objectList = document.createElement("li");
