@@ -102,3 +102,21 @@ body::-webkit-scrollbar-thumb{
 .tox .tox-statusbar{
     height: 35px !important;
 }
+
+
+.header-animation{
+    position: relative;
+    top: -200px;
+    transition: top 2s ease-in-out;
+}
+
+.banner-animation{
+    position: relative;
+    top: 200px;
+    transition: bottom 20s ease-in-out;
+}
+
+.show {
+    top: 0;
+    bottom: 0;
+  }

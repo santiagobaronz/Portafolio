@@ -32,16 +32,23 @@ export const menuLinks = () => {
                 switch(sectionToShow){
                     case "home":
                         document.title = "Santiago Baron Zuleta - Ingeniero en sistemas y desarrollador front-end";
+                        document.querySelector(".banner-animation").classList.add("show")
+                        document.querySelector(".header-animation").classList.add("show")
                         break;
                     case "about":
                         document.title = "Sobre mí - Santiago Baron Zuleta";
+                        document.querySelector(".header-animation").classList.remove("header-animation")
                         disableLink("/about")
                         break;
                     case "articles":
                         document.title = "Artículos - Santiago Baron Zuleta";
+                        document.querySelector(".header-animation").classList.remove("header-animation")
                         disableLink("/articles")
                         break;
                     case "articleunitary":
+
+                        document.querySelector(".header-animation").classList.remove("header-animation")
+
                         const idArticle = getHeaderArticle();
                         const articleTitle = document.querySelector("#article_title");
                         const articleDate = document.querySelector("#article_date");
@@ -61,6 +68,7 @@ export const menuLinks = () => {
                         break;
                     case "projects":
                         document.title = "Proyectos - Santiago Baron Zuleta";
+                        document.querySelector(".header-animation").classList.remove("header-animation")
                         disableLink("/projects")
                         break;
                 }

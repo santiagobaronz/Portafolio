@@ -625,9 +625,6 @@ video {
 .mt-11 {
   margin-top: 2.75rem;
 }
-.mb-24 {
-  margin-bottom: 6rem;
-}
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -1401,6 +1398,24 @@ body::-webkit-scrollbar-thumb{
 .tox .tox-statusbar{
     height: 35px !important;
 }
+
+
+.header-animation{
+    position: relative;
+    top: -200px;
+    transition: top 2s ease-in-out;
+}
+
+.banner-animation{
+    position: relative;
+    top: 200px;
+    transition: bottom 20s ease-in-out;
+}
+
+.show {
+    top: 0;
+    bottom: 0;
+  }
 
 .hover\:translate-x-0\.5:hover {
   --tw-translate-x: 0.125rem;
