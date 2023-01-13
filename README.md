@@ -8,6 +8,7 @@ On this website you will find my portfolio with my contact details and my projec
 - CSS3
 - JavaScript Vanilla
 - NodeJS
+- ExpressJS
 - Tailwind CSS
 - MySQL
 - TinyMCE
