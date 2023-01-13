@@ -14,8 +14,4 @@ window.addEventListener("load", async() => {
     fillArticles();
     fillProjects();
 
-    
-
-   
-    
 })
