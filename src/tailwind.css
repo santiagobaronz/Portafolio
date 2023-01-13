@@ -107,16 +107,11 @@ body::-webkit-scrollbar-thumb{
 .header-animation{
     position: relative;
     top: -200px;
-    transition: top 2s ease-in-out;
+    animation: menu-animation 0.5s forwards;
+    
 }
 
-.banner-animation{
-    position: relative;
-    top: 200px;
-    transition: bottom 20s ease-in-out;
+@keyframes menu-animation{
+    from{top: -200px;}
+    to{top: 0;bottom: 0;}
 }
-
-.show {
-    top: 0;
-    bottom: 0;
-  }

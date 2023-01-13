@@ -13,11 +13,13 @@ export const menuLinks = () => {
 
     const sections = document.querySelectorAll(".section");
     const main = document.querySelector("main")
+    const gridDecoration = document.querySelector("#grid-decoration");
     
     const showSectionByLink = () => {
         const sectionToShow = getHeaderPage();
         sections.forEach(section => {
             if(section.id != sectionToShow){
+
                 if(sectionToShow != "home" && sectionToShow != "about" && 
                     sectionToShow != "articles" && sectionToShow != "articleunitary" &&
                     sectionToShow != "projects"){
@@ -26,28 +28,30 @@ export const menuLinks = () => {
                     section.classList.add("hidden")
                     section.classList.remove("block")
                 }
+
             }else{
+
                 section.classList.remove("hidden")
                 section.classList.add("block")
+
+                if(sectionToShow != "home"){
+                    gridDecoration.classList.add("hidden")
+                }
+
                 switch(sectionToShow){
                     case "home":
                         document.title = "Santiago Baron Zuleta - Ingeniero en sistemas y desarrollador front-end";
-                        document.querySelector(".banner-animation").classList.add("show")
-                        document.querySelector(".header-animation").classList.add("show")
                         break;
                     case "about":
                         document.title = "Sobre mí - Santiago Baron Zuleta";
-                        document.querySelector(".header-animation").classList.remove("header-animation")
                         disableLink("/about")
                         break;
                     case "articles":
                         document.title = "Artículos - Santiago Baron Zuleta";
-                        document.querySelector(".header-animation").classList.remove("header-animation")
                         disableLink("/articles")
                         break;
                     case "articleunitary":
 
-                        document.querySelector(".header-animation").classList.remove("header-animation")
 
                         const idArticle = getHeaderArticle();
                         const articleTitle = document.querySelector("#article_title");
@@ -68,7 +72,6 @@ export const menuLinks = () => {
                         break;
                     case "projects":
                         document.title = "Proyectos - Santiago Baron Zuleta";
-                        document.querySelector(".header-animation").classList.remove("header-animation")
                         disableLink("/projects")
                         break;
                 }
