@@ -1,5 +1,7 @@
 
-export const menuSettings = () => {
+window.addEventListener("load", async() => {
+
+    const menuSettings = () => {
     const menuButton = document.querySelector("#menu-button");
     const floatMenu = document.querySelector("#float-menu");
     const closeMenu = document.querySelector("#close-menu");
@@ -25,4 +27,12 @@ export const menuSettings = () => {
             floatMenu.classList.add("hidden")
         }
     })
+
+    const section = document.querySelector(".section");
+    section.classList.remove("hidden")
+
 }
+
+menuSettings();
+
+})

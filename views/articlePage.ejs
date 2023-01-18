@@ -1,0 +1,27 @@
+<%- include('templates/header', {page: page}) %>
+
+
+<div id="articleunitary" class="section hidden">
+    <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <div class="xl:relative">
+            <div class="mx-auto max-w-2xl">
+                <article>
+                    <header class="flex flex-col">
+                        <h1 class="mt-6 text-5xl font-bold tracking-tight line-hight-fixed text-white mb-7"
+                            id="article_title"><%= title %> 
+                        </h1>
+                        <time datetime="2022-09-05" class="order-first flex items-center text-base text-gray">
+                            <span class="h-4 w-0.5 rounded-full bg-gray"></span>
+                            <span class="ml-3" id="article_date"><%= date %> </span>
+                        </time>
+                    </header>
+                    <div class="mt-8 prose dark:prose-inverttext-base leading-8 articleText" id="article_content">
+                        <%- text %> 
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('templates/footer') %> 
