@@ -8,7 +8,7 @@ import { Studies } from '../components/home/Studies'
 export const Home = () => {
 
 	useEffect(() => {
-		document.title = "Santiago Baron Zuleta - Ingeniero en sistemas y desarrollador front-end";
+		document.title = "Santiago Baron Zuleta - Ingeniero en sistemas y desarrollador full-stack";
 	}, []);
 
 
