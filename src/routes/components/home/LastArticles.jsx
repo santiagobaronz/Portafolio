@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export const LastArticles = () => {
 
@@ -20,10 +21,10 @@ export const LastArticles = () => {
 				<article key={article.id} className="group relative flex flex-col items-start">
 					<h2 className="text-base font-semibold tracking-tight text-white">
 						<div className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-gray-hover opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"></div>
-						<a href="/articles/" aria-details={article.titulo_articulo} className='articleURL'>
+						<Link to={`/articles/${article.link_articulo}`} aria-details={article.titulo_articulo} className='articleURL'>
 							<span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
 							<span className="relative z-10">{article.titulo_articulo}</span>
-						</a>
+						</Link>
 					</h2>
 					<time className="relative z-10 order-first mb-3 flex items-center text-sm text-gray pl-3.5" dateTime={article.fecha_date}>
 						<span className="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">

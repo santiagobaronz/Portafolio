@@ -9,8 +9,10 @@ import { Home } from './routes/pages/Home'
 import { About } from './routes/pages/About'
 import { Articles } from './routes/pages/Articles'
 import { Projects } from './routes/pages/Projects'
+import { Article } from './routes/pages/Article'
 
 import './index.css'
+
 
 const router = createBrowserRouter([
 	{
@@ -20,7 +22,8 @@ const router = createBrowserRouter([
 	  children: [
 		{ path: '/', element: <Home/> },
 		{ path: '/about', element: <About/> },
-		{ path: '/articles', element: <Articles/> },
+		{ path: '/articles', element: <Articles/>},
+		{ path: 'articles/:articleName', element: <Article/>},
 		{ path: '/projects', element: <Projects/> }
 	  ]
 	}
