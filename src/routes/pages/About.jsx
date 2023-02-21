@@ -28,8 +28,8 @@ export const About = () => {
 					</div>
 					<div className="pl-20 max-lg:order-first max-lg:pl-0">
 						<div className="px-2.5 lg:max-w-none">
-							<img src="/images/yo.jpg" width="400" height="400" decoding="async" data-nimg="1"
-								className="aspect-square rotate-3 rounded-2xl object-cover max-lg:block max-lg:m-auto" loading="lazy" />
+							<img src="/images/yo.jpg" width="400" height="400" decoding="async" data-nimg="1" loading="eager"
+								className="aspect-square rotate-3 rounded-2xl object-cover max-lg:block max-lg:m-auto" />
 							<ul className="mt-14 p-10 border border-black-700 rounded-xl max-lg:hidden">
 								<p className="text-white font-medium pb-9">Mis redes sociales:</p>
 								<li className="flex">
