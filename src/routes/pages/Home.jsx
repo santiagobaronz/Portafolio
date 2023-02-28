@@ -96,6 +96,7 @@ export const Home = () => {
 									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">SQL</li>
 									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">React</li>
 									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Java</li>
+									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">MySQL</li>
 									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Tailwind</li>
 									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">ExpressJS</li>
 									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Git</li>
@@ -122,7 +123,7 @@ export const Home = () => {
 								<Jobs />
 							</ul>
 							<a className="group inline-flex items-center gap-2 justify-center rounded-md py-3 px-3 text-sm outline-offset-2 transition active:transition-none bg-gray-hover font-medium text-black-200 hover:text-white hover:bg-black-700 mt-6 w-full"
-								href="/#">Descargar CV
+								href="/docs/CV - Santiago Baron Zuleta (English).pdf" target={'_blank'}>Descargar CV
 								<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"
 									className="h-4 w-4 stroke-gray group-hover:stroke-white transition">
 									<path d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5" strokeWidth={"1.5"}
