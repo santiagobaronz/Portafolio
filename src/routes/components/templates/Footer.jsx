@@ -10,7 +10,7 @@ export const Footer = () => {
 						<div className="flex flex-col items-center justify-between gap-6 sm:flex-row flex-wrap">
 							<div className="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200 flex-wrap max-md:gap-x-14">
 								<Link className="transition text-black-300 about" to={"/about"}>Sobre mi</Link>
-								<Link className="transition text-black-300 articles" to={"/articles"}>Articulos</Link>
+								{/*<Link className="transition text-black-300 articles" to={"/articles"}>Articulos</Link>*/}
 								<Link className="transition text-black-300">Proyectos</Link>
 								<Link className="transition text-black-300" >Hablemos</Link>
 							</div>

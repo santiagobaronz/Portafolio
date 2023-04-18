@@ -83,11 +83,11 @@ export const Header = () => {
 														Sobre mí
 													</Link>
 												</li>
-												<li>
+												{/*<li>
 													<Link to="/articles" onClick={handleMenu} className="block py-3 text-white font-normal cursor-pointer articles" data-headlessui-state="open">
 														Artículos
 													</Link>
-												</li>
+												</li>*/}
 												<li>
 													<Link to="/projects" onClick={handleMenu} className="block py-3 text-white font-normal cursor-pointer" data-headlessui-state="open">
 														Proyectos
@@ -121,11 +121,11 @@ export const Header = () => {
 									Sobre mí
 								</Link>
 							</li>
-							<li className="ml-12 text-white font-medium cursor-pointer articles">
+							{/*<li className="ml-12 text-white font-medium cursor-pointer articles">
 								<Link to="/articles" className="home-link">
 									Artículos
 								</Link>
-							</li>
+							</li>*/}
 							<li className="ml-12 text-white font-medium cursor-pointer">
 								<Link to="/projects" className="home-link">
 									Proyectos

@@ -74,72 +74,74 @@ export const Home = () => {
 					</div>
 				</div>
 
-				<div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-					<div className="flex flex-col gap-16" id="articlesList">
-						<LastArticles />
+				<div className="mx-auto flex flex-wrap gap-6">
+
+					<div className="rounded-2xl border border-black-700 p-6 lg:w-1/2 w-full lg:flex-shrink-1">
+						<h2 className="flex text-sm font-semibold text-white">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="stroke-gray fill-gray" viewBox="0 0 16 16">
+								<path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+							</svg><span className="ml-3">Educación</span></h2>
+
+						<ul className="mt-6 space-y-4" id="studiesList">
+							<Studies />
+						</ul>
 					</div>
 
-					<div className="space-y-10 lg:pl-16 xl:pl-24">
-						<div className="rounded-2xl border border-black-700 p-6">
-							<h2 className="flex text-sm font-semibold text-white mb-5">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className=" fill-gray" viewBox="0 0 16 16">
-									<path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z" />
-								</svg>
-								<span className="ml-3">Tecnologías con nivel avanzado</span>
-							</h2>
-							<div>
-								<ul className="flex flex-wrap gap-x-3 gap-y-3">
-									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">HTML5</li>
-									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">CSS3</li>
-									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Javascript</li>
-									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">NodeJS</li>
-									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">SQL</li>
-									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">React</li>
-									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Java</li>
-									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">MySQL</li>
-									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Tailwind</li>
-									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">ExpressJS</li>
-									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Git</li>
-									<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Github</li>
-								</ul>
-							</div>
-						</div>
+					<div className="rounded-2xl border border-black-700 p-6 lg:w-1/2 w-full lg:flex-shrink-1" style={{ flexBasis: '0', flexGrow: '1' }}>
+						<h2 className="flex text-sm font-semibold text-white">
+							<svg viewBox="0 0 24 24"
+								fill="none" strokeWidth={"1.5"} strokeLinecap="round" strokeLinejoin="round"
+								aria-hidden="true" className="h-6 w-6 flex-none">
+								<path
+									d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
+									className="fill-stroke stroke-black-600">
+								</path>
+								<path
+									d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
+									className=" stroke-black-600"></path>
+							</svg><span className="ml-3">Trabajos</span></h2>
 
-						<div className="rounded-2xl border border-black-700 p-6">
-							<h2 className="flex text-sm font-semibold text-white">
-								<svg viewBox="0 0 24 24"
-									fill="none" strokeWidth={"1.5"} strokeLinecap="round" strokeLinejoin="round"
-									aria-hidden="true" className="h-6 w-6 flex-none">
-									<path
-										d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-										className="fill-stroke stroke-black-600">
-									</path>
-									<path
-										d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
-										className=" stroke-black-600"></path>
-								</svg><span className="ml-3">Trabajos</span></h2>
+						<ul className="mt-6 space-y-4" id="jobsList">
+							<Jobs />
+						</ul>
+						<a className="group inline-flex items-center gap-2 justify-center rounded-md py-3 px-3 text-sm outline-offset-2 transition active:transition-none bg-gray-hover font-medium text-black-200 hover:text-white hover:bg-black-700 mt-6 w-full"
+							href="/docs/CV - Santiago Baron Zuleta (Español).pdf" target={'_blank'}>Mira mi hoja de vida (Español)
+							<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"
+								className="h-4 w-4 stroke-gray group-hover:stroke-white transition">
+								<path d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5" strokeWidth={"1.5"}
+									strokeLinecap="round" strokeLinejoin="round"></path>
+							</svg>
+						</a>
+						<a className="group inline-flex items-center gap-2 justify-center rounded-md py-3 px-3 text-sm outline-offset-2 transition active:transition-none bg-gray-hover font-medium text-black-200 hover:text-white hover:bg-black-700 mt-3 w-full"
+							href="/docs/CV - Santiago Baron Zuleta (English).pdf" target={'_blank'}>Watch my resume (English)
+							<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"
+								className="h-4 w-4 stroke-gray group-hover:stroke-white transition">
+								<path d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5" strokeWidth={"1.5"}
+									strokeLinecap="round" strokeLinejoin="round"></path>
+							</svg>
+						</a>
+					</div>
 
-							<ul className="mt-6 space-y-4" id="jobsList">
-								<Jobs />
-							</ul>
-							<a className="group inline-flex items-center gap-2 justify-center rounded-md py-3 px-3 text-sm outline-offset-2 transition active:transition-none bg-gray-hover font-medium text-black-200 hover:text-white hover:bg-black-700 mt-6 w-full"
-								href="/docs/CV - Santiago Baron Zuleta (English).pdf" target={'_blank'}>Descargar CV
-								<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"
-									className="h-4 w-4 stroke-gray group-hover:stroke-white transition">
-									<path d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5" strokeWidth={"1.5"}
-										strokeLinecap="round" strokeLinejoin="round"></path>
-								</svg>
-							</a>
-						</div>
-
-						<div className="rounded-2xl border border-black-700 p-6">
-							<h2 className="flex text-sm font-semibold text-white">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="stroke-gray fill-gray" viewBox="0 0 16 16">
-									<path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-								</svg><span className="ml-3">Educación</span></h2>
-
-							<ul className="mt-6 space-y-4" id="studiesList">
-								<Studies />
+					<div className="rounded-2xl border border-black-700 p-6 w-full">
+						<h2 className="flex text-sm font-semibold text-white mb-5">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className=" fill-gray" viewBox="0 0 16 16">
+								<path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z" />
+							</svg>
+							<span className="ml-3">Tecnologías con nivel avanzado</span>
+						</h2>
+						<div>
+							<ul className="flex flex-wrap gap-x-3 gap-y-3">
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">HTML5</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">CSS3</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Javascript</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">NodeJS</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">ExpressJS</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">React</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Next.JS</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Vite</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">MySQL</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Tailwind CSS</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Git</li>
 							</ul>
 						</div>
 					</div>
