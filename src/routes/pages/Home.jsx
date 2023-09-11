@@ -36,7 +36,12 @@ export const Home = () => {
 					<p className="mx-auto mt-4 max-w-2xl text-lg font-normal text-black-300 lg:text-xl lg:leading-8">A continuación encontrarás mis últimos proyectos realizados, mis artículos e información profesional. </p>
 				</div>
 				<div className="grid grid-cols-2 gap-8 max-lg:block">
-					<LastProjects />
+					<a href="https://espectrosoft.com/" target='_blank'>
+						<img src="https://imgur.com/X9vOCEM.jpg" className="rounded-xl cursor-pointer hover:shadow-2xl hover:translate-x-0.5 hover:-translate-y-0.5 transition-all max-lg:mb-6" />
+					</a>
+					<a href="https://ec.ivao.aero" target='_blank'>
+						<img src="https://imgur.com/h1PRtCG.jpg" className="rounded-xl cursor-pointer hover:shadow-2xl hover:translate-x-0.5 hover:-translate-y-0.5 transition-all max-lg:mb-6" />
+					</a>
 				</div>
 			</div>
 
@@ -83,7 +88,50 @@ export const Home = () => {
 							</svg><span className="ml-3">Educación</span></h2>
 
 						<ul className="mt-6 space-y-4" id="studiesList">
-							<Studies />
+							<li className="flex gap-4">
+								<div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-black-700 ring-2 ring-stroke bg-gray-hover">
+									<img src={"https://i.imgur.com/AOylUh2.png"} width="32" height="32" decoding="async" data-nimg="1" className="h-7 w-7" loading="lazy" />
+								</div>
+								<dl className="flex flex-auto flex-wrap gap-x-2">
+									<dd className="w-full flex-none text-sm font-medium text-white">Técnico en programación</dd>
+									<dd className="text-xs text-white">Servicio nacional de aprendizaje</dd>
+									<dd className="ml-auto text-xs text-white" aria-label={`2018 until 2018`}>
+										<time dateTime="2018"></time>
+										<span aria-hidden="true">2018 — 2018</span>
+										<time dateTime="2018"></time>
+									</dd>
+								</dl>
+							</li>
+
+							<li className="flex gap-4">
+								<div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-black-700 ring-2 ring-stroke bg-gray-hover">
+									<img src={"https://i.imgur.com/85vaCG3.png"} width="32" height="32" decoding="async" data-nimg="1" className="h-7 w-7" loading="lazy" />
+								</div>
+								<dl className="flex flex-auto flex-wrap gap-x-2">
+									<dd className="w-full flex-none text-sm font-medium text-white">Diplomado de programación</dd>
+									<dd className="text-xs text-white">Pontificia Universidad Javeriana</dd>
+									<dd className="ml-auto text-xs text-white" aria-label={`2020 until 2021`}>
+										<time dateTime="2020"></time>
+										<span aria-hidden="true">2020 — 2021</span>
+										<time dateTime="2021"></time>
+									</dd>
+								</dl>
+							</li>
+
+							<li className="flex gap-4">
+								<div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-black-700 ring-2 ring-stroke bg-gray-hover">
+									<img src={"https://i.imgur.com/pbhEi9T.png"} width="32" height="32" decoding="async" data-nimg="1" className="h-7 w-7" loading="lazy" />
+								</div>
+								<dl className="flex flex-auto flex-wrap gap-x-2">
+									<dd className="w-full flex-none text-sm font-medium text-white">Ingeniería en sistemas</dd>
+									<dd className="text-xs text-white">Universidad Distrital FJC</dd>
+									<dd className="ml-auto text-xs text-white" aria-label={`2021 until Presente`}>
+										<time dateTime="2021"></time>
+										<span aria-hidden="true">2021 — Presente</span>
+										<time dateTime="Presente"></time>
+									</dd>
+								</dl>
+							</li>
 						</ul>
 					</div>
 
@@ -102,7 +150,41 @@ export const Home = () => {
 							</svg><span className="ml-3">Trabajos</span></h2>
 
 						<ul className="mt-6 space-y-4" id="jobsList">
-							<Jobs />
+
+							<li className="flex gap-4">
+								<div
+									className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-black-700 ring-2 ring-stroke bg-gray-hover">
+									<img src={"https://i.imgur.com/bJgE8KV.png"} width="32" height="32" decoding="async" data-nimg="1" className="h-7 w-7"
+										loading="lazy" />
+								</div>
+								<dl className="flex flex-auto flex-wrap gap-x-2">
+									<dd className="w-full flex-none text-sm font-medium text-white">IVAO Ecuador</dd>
+									<dd className="text-xs text-white">Desarrollador Full-stack</dd>
+									<dd className="ml-auto text-xs text-white" aria-label={`2020 until Present`}>
+										<time dateTime="2020"></time>
+										<span aria-hidden="true">2020 — 2023</span>
+										<time dateTime="Presente"></time>
+									</dd>
+								</dl>
+							</li>
+
+							<li className="flex gap-4">
+								<div
+									className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-black-700 ring-2 ring-stroke bg-gray-hover">
+									<img src={"https://imgur.com/ZIyZSrF.png"} width="32" height="32" decoding="async" data-nimg="1" className="h-7 w-7"
+										loading="lazy" />
+								</div>
+								<dl className="flex flex-auto flex-wrap gap-x-2">
+									<dd className="w-full flex-none text-sm font-medium text-white">Espectrosoft</dd>
+									<dd className="text-xs text-white">Desarrollador Full-stack</dd>
+									<dd className="ml-auto text-xs text-white" aria-label={`2023 until Present`}>
+										<time dateTime="2023"></time>
+										<span aria-hidden="true">2023 — Presente</span>
+										<time dateTime="Presente"></time>
+									</dd>
+								</dl>
+							</li>
+
 						</ul>
 						<a className="group inline-flex items-center gap-2 justify-center rounded-md py-3 px-3 text-sm outline-offset-2 transition active:transition-none bg-gray-hover font-medium text-black-200 hover:text-white hover:bg-black-700 mt-6 w-full"
 							href="/docs/CV - Santiago Baron Zuleta (Español).pdf" target={'_blank'}>Mira mi hoja de vida (Español)
@@ -134,12 +216,13 @@ export const Home = () => {
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">HTML5</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">CSS3</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Javascript</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">TypeScript</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">NextJS</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">NodeJS</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">ExpressJS</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">React</li>
-								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Next.JS</li>
-								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Vite</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">MySQL</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">PostgreSQL</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Tailwind CSS</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Git</li>
 							</ul>

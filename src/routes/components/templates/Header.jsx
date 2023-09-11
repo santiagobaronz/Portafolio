@@ -131,8 +131,8 @@ export const Header = () => {
 									Proyectos
 								</Link>
 							</li>
-							<li className="ml-12 text-white font-medium px-10 py-2 bg-black-700 border-black-600 border-1 rounded-lg cursor-pointer">
-								<Link to="/uses" className="home-link">
+							<li>
+								<Link to="https://wa.link/9ap9sj" target='_blank' className="home-link ml-12 text-white font-medium px-10 py-[10px] bg-black-700 border-black-600 border-1 rounded-lg cursor-pointer">
 									Hablemos
 								</Link>
 							</li>
