@@ -176,14 +176,7 @@ export const Home = () => {
 									strokeLinecap="round" strokeLinejoin="round"></path>
 							</svg>
 						</a>
-						<a className="group inline-flex items-center gap-2 justify-center rounded-md py-3 px-3 text-sm outline-offset-2 transition active:transition-none bg-gray-hover font-medium text-black-200 hover:text-white hover:bg-black-700 mt-3 w-full"
-							href="/docs/CV - Santiago Baron Zuleta (English).pdf" target={'_blank'}>Watch my resume (English)
-							<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"
-								className="h-4 w-4 stroke-gray group-hover:stroke-white transition">
-								<path d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5" strokeWidth={"1.5"}
-									strokeLinecap="round" strokeLinejoin="round"></path>
-							</svg>
-						</a>
+					
 					</div>
 
 					<div className="rounded-2xl border border-black-700 p-6 w-full">
