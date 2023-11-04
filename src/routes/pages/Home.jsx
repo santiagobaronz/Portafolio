@@ -36,11 +36,11 @@ export const Home = () => {
 					<p className="mx-auto mt-4 max-w-2xl text-lg font-normal text-black-300 lg:text-xl lg:leading-8">A continuación encontrarás mis últimos proyectos realizados, mis artículos e información profesional. </p>
 				</div>
 				<div className="grid grid-cols-2 gap-8 max-lg:block">
-					<a href="https://espectrosoft.com/" target='_blank'>
-						<img src="https://imgur.com/X9vOCEM.jpg" className="rounded-xl cursor-pointer hover:shadow-2xl hover:translate-x-0.5 hover:-translate-y-0.5 transition-all max-lg:mb-6" />
-					</a>
 					<a href="https://ec.ivao.aero" target='_blank'>
 						<img src="https://imgur.com/h1PRtCG.jpg" className="rounded-xl cursor-pointer hover:shadow-2xl hover:translate-x-0.5 hover:-translate-y-0.5 transition-all max-lg:mb-6" />
+					</a>
+					<a href="https://mars.santiagobaron.com/" target='_blank'>
+						<img src="https://repository-images.githubusercontent.com/493496084/3fd4b2e2-36d8-4dc6-93d9-50d6fbbdc0c8" className="rounded-xl cursor-pointer hover:shadow-2xl hover:translate-x-0.5 hover:-translate-y-0.5 transition-all max-lg:mb-6" />
 					</a>
 				</div>
 			</div>
@@ -54,7 +54,7 @@ export const Home = () => {
 								<path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
 							</svg>
 							<div className="ml-7 text-left">
-								<p className="text-lg text-left text-white font-medium">2 años</p>
+								<p className="text-lg text-left text-white font-medium">3 años</p>
 								<h3 className="text-black-300 font-medium">Experiencia</h3>
 							</div>
 						</div>
@@ -95,10 +95,10 @@ export const Home = () => {
 								<dl className="flex flex-auto flex-wrap gap-x-2">
 									<dd className="w-full flex-none text-sm font-medium text-white">Técnico en programación</dd>
 									<dd className="text-xs text-white">Servicio nacional de aprendizaje</dd>
-									<dd className="ml-auto text-xs text-white" aria-label={`2018 until 2018`}>
+									<dd className="ml-auto text-xs text-white" aria-label={`2018 until 2019`}>
 										<time dateTime="2018"></time>
-										<span aria-hidden="true">2018 — 2018</span>
-										<time dateTime="2018"></time>
+										<span aria-hidden="true">2018 — 2019</span>
+										<time dateTime="2019"></time>
 									</dd>
 								</dl>
 							</li>
@@ -125,9 +125,9 @@ export const Home = () => {
 								<dl className="flex flex-auto flex-wrap gap-x-2">
 									<dd className="w-full flex-none text-sm font-medium text-white">Ingeniería en sistemas</dd>
 									<dd className="text-xs text-white">Universidad Distrital FJC</dd>
-									<dd className="ml-auto text-xs text-white" aria-label={`2021 until Presente`}>
-										<time dateTime="2021"></time>
-										<span aria-hidden="true">2021 — Presente</span>
+									<dd className="ml-auto text-xs text-white" aria-label={`2019 until now`}>
+										<time dateTime="2019"></time>
+										<span aria-hidden="true">2019 — Presente</span>
 										<time dateTime="Presente"></time>
 									</dd>
 								</dl>
@@ -159,32 +159,14 @@ export const Home = () => {
 								</div>
 								<dl className="flex flex-auto flex-wrap gap-x-2">
 									<dd className="w-full flex-none text-sm font-medium text-white">IVAO Ecuador</dd>
-									<dd className="text-xs text-white">Desarrollador Full-stack</dd>
+									<dd className="text-xs text-white">Desarrollador React</dd>
 									<dd className="ml-auto text-xs text-white" aria-label={`2020 until Present`}>
 										<time dateTime="2020"></time>
 										<span aria-hidden="true">2020 — 2023</span>
-										<time dateTime="Presente"></time>
-									</dd>
-								</dl>
-							</li>
-
-							<li className="flex gap-4">
-								<div
-									className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-black-700 ring-2 ring-stroke bg-gray-hover">
-									<img src={"https://imgur.com/ZIyZSrF.png"} width="32" height="32" decoding="async" data-nimg="1" className="h-7 w-7"
-										loading="lazy" />
-								</div>
-								<dl className="flex flex-auto flex-wrap gap-x-2">
-									<dd className="w-full flex-none text-sm font-medium text-white">Espectrosoft</dd>
-									<dd className="text-xs text-white">Desarrollador Full-stack</dd>
-									<dd className="ml-auto text-xs text-white" aria-label={`2023 until Present`}>
 										<time dateTime="2023"></time>
-										<span aria-hidden="true">2023 — Presente</span>
-										<time dateTime="Presente"></time>
 									</dd>
 								</dl>
 							</li>
-
 						</ul>
 						<a className="group inline-flex items-center gap-2 justify-center rounded-md py-3 px-3 text-sm outline-offset-2 transition active:transition-none bg-gray-hover font-medium text-black-200 hover:text-white hover:bg-black-700 mt-6 w-full"
 							href="/docs/CV - Santiago Baron Zuleta (Español).pdf" target={'_blank'}>Mira mi hoja de vida (Español)
@@ -217,14 +199,16 @@ export const Home = () => {
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">CSS3</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Javascript</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">TypeScript</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">React</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">NextJS</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Tailwind CSS</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">NodeJS</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">ExpressJS</li>
-								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">React</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">MySQL</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">PostgreSQL</li>
-								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Tailwind CSS</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">SQL</li>
 								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Git</li>
+								<li className="text-sm px-4 py-2 rounded-lg text-white font-semibold tracking-tight bg-gray-hover">Github</li>
 							</ul>
 						</div>
 					</div>
