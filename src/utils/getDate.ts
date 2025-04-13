@@ -8,7 +8,6 @@ export const getDate = (date: Date) => {
 		8: "Septiembre", 9: "Octubre", 10: "Noviembre", 11: "Diciembre"
 	}
 
-	/* Getting the day, month, date, year and then putting it all together in a string. */
 	const monthOnDate = months[dateToTransform.getMonth()];
 	const numberOnDate = dateToTransform.getDate();
 	const yearOnDate = dateToTransform.getFullYear();
