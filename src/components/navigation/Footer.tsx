@@ -12,7 +12,7 @@ export const Footer = () => {
 								<Link href={"/"} className="transition text-black-300 about">Inicio</Link>
                                 <Link href={"/projects"} className="transition text-black-300">Proyectos</Link>
                                 <Link href={"/gallery"} className="transition text-black-300 about">Galería</Link>
-								<Link href={"/contact"} className="transition text-black-300" >Hablemos</Link>
+								<Link href="https://wa.link/2znov8" target='_blank' className="transition text-black-300" >Hablemos</Link>
 							</div>
 							<p className="text-sm text-gray">© {new Date().getFullYear()} - Santiago Baron Zuleta</p>
 						</div>

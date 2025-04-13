@@ -8,11 +8,11 @@ export default function Projects() {
 
   return (
     <div>
-      <div className="max-w-2xl mb-16">
-        <h1 className="text-5xl font-bold tracking-tight text-white line-hight-fixed">
+      <div className=" mb-16">
+        <h1 className="text-5xl font-bold tracking-tight text-white line-hight-fixed max-w-2xl">
           Proyectos desarrollados a lo largo del tiempo
         </h1>
-        <p className="mt-6 text-base text-black-300">
+        <p className="mt-6 text-base text-black-300 max-w-3xl">
           Aquí encontrarás una lista de mis creaciones y proyectos más importantes.
           He seleccionado estos proyectos porque me han permitido poner mis habilidades
           y conocimientos en práctica. Algunos de  estos proyectos son personales, mientras

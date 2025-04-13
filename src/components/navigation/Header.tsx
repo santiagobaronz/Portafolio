@@ -92,7 +92,7 @@ export const Header = () => {
 													</Link>
 												</li>
 												<li>
-													<Link href="/uses" onClick={handleMenu} className="block py-3 text-white font-normal text-center border-white border-1 rounded-lg cursor-pointer mt-9" data-headlessui-state="open">
+													<Link href="https://wa.link/2znov8" target='_blank' onClick={handleMenu} className="block py-3 text-white font-normal text-center border-white border-1 rounded-lg cursor-pointer mt-9" data-headlessui-state="open">
 														Hablemos
 													</Link>
 												</li>
@@ -125,7 +125,7 @@ export const Header = () => {
 								</Link>
 							</li>
 							<li>
-								<Link href="https://wa.link/9ap9sj" target='_blank' className="home-link ml-12 text-white font-medium px-10 py-[10px] bg-black-700 border-black-600 border-1 rounded-lg cursor-pointer">
+								<Link href="https://wa.link/2znov8" target='_blank' className="home-link ml-12 text-white font-medium px-10 py-[10px] bg-black-700 border-black-600 border-1 rounded-lg cursor-pointer">
 									Hablemos
 								</Link>
 							</li>

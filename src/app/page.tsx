@@ -16,7 +16,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-y-16 max-lg:grid-cols-1">
             <div>
               <h1 className="sm:text-5xl text-4xl font-bold tracking-tight text-white line-hight-fixed">
-                Soy Santiago Baron, me gusta programar y tomar <Link href="/gallery" className="animate-pulse duration-1000 transition-all">fotografías</Link>.
+                Soy Santiago Baron, me gusta programar y tomar <Link href={"/gallery"}>fotografías</Link>.
               </h1>
               <div className="mt-8 space-y-7 text-base text-black-300 leading-7">
                 <p>Soy un desarrollador de software, nacido y residente en Bogotá, Colombia. Desde muy temprana
