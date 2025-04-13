@@ -14,8 +14,8 @@ export const Header = () => {
 
 	const handleCloseMenu = (event: MouseEvent) => {
 		if (!(event.target as HTMLElement).closest('.float-menu')) {
-            setIsOpen(false);
-        }
+			setIsOpen(false);
+		}
 	};
 
 	useEffect(() => {
@@ -43,7 +43,7 @@ export const Header = () => {
 
 			<header className="flex relative md:mb-32 items-center justify-between max-md:block mb-20 header-animation">
 				<div className="flex w-full justify-between lg:w-56">
-					<Link href={"/"}><img src="/logo.png" alt='logo' className="w-48 max-md:m-auto max-md:mb-8 home cursor-pointer" /></Link>
+					<Link href={"/"}><img src="/logo.svg" alt='logo' className="w-48 max-md:m-auto max-md:mb-8 home cursor-pointer" /></Link>
 
 					<div className="pointer-events-auto lg:hidden flex max-md:block" data-headlessui-state="open">
 						<button
@@ -51,7 +51,7 @@ export const Header = () => {
 							id="menu-button" type="button" aria-expanded="true" data-headlessui-state="open"
 							aria-controls="headlessui-popover-panel-:Rqb6H1:" onClick={handleMenu}>Menu
 							<svg viewBox="0 0 8 6" aria-hidden="true"
-								className="ml-3 mt-0.5 w-2 stroke-white">
+								className="ml-3 mt-2 w-2 stroke-white">
 								<path d="M1.75 1.75 4 4.25l2.25-2.5" fill="none" strokeWidth="1.5" strokeLinecap="round"
 									strokeLinejoin="round">
 								</path>

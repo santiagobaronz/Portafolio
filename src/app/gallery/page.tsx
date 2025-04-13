@@ -13,7 +13,7 @@ export default function GalleryPage() {
         </h1>
         <p className="mt-6 text-base text-black-300">
           A lo largo del tiempo, he tenido la oportunidad de capturar momentos únicos, lugares especiales y detalles
-          que me llaman la atención. En la galería se encuentra una selección de mis fotografías y momentos favoritos que
+          que me llaman la atención. En la galería se encuentran una selección de mis fotografías y momentos favoritos que
           me gustaría compartir con mis visitantes.
         </p>
       </div>
