@@ -201,8 +201,8 @@ export default function Home() {
                 <div className="flex flex-auto flex-wrap gap-x-2">
                   <p className="w-full flex-none text-sm font-medium text-white">Ingeniería en sistemas</p>
                   <div className="md:flex justify-between w-full">
-                    <p className="text-xs text-white">Universidad Distrital FJC</p>
-                    <p className="ml-auto text-xs text-white" aria-label={`2021 until now`}>
+                    <p className="text-xs text-white/60">Universidad Distrital FJC</p>
+                    <p className="ml-auto text-xs text-white/60" aria-label={`2021 until now`}>
                       <time dateTime="2021"></time>
                       <span aria-hidden="true">2021 — Presente</span>
                       <time dateTime="Presente"></time>
@@ -218,8 +218,8 @@ export default function Home() {
                 <div className="flex flex-auto flex-wrap gap-x-2">
                   <p className="w-full flex-none text-sm font-medium text-white">Diplomado de programación</p>
                   <div className="md:flex justify-between w-full">
-                    <p className="text-xs text-white">Universidad Javeriana</p>
-                    <p className="ml-auto text-xs text-white" aria-label={`2020 until 2021`}>
+                    <p className="text-xs text-white/60">Universidad Javeriana</p>
+                    <p className="ml-auto text-xs text-white/60" aria-label={`2020 until 2021`}>
                       <time dateTime="2020"></time>
                       <span aria-hidden="true">2020 — 2021</span>
                       <time dateTime="2021"></time>
@@ -236,8 +236,8 @@ export default function Home() {
                 <div className="flex flex-auto flex-wrap gap-x-2">
                   <p className="w-full flex-none text-sm font-medium text-white">Técnico en programación</p>
                   <div className="md:flex justify-between w-full">
-                    <p className="text-xs text-white">Servicio nacional de aprendizaje</p>
-                    <p className="ml-auto text-xs text-white" aria-label={`2018 until 2019`}>
+                    <p className="text-xs text-white/60">Servicio nacional de aprendizaje</p>
+                    <p className="ml-auto text-xs text-white/60" aria-label={`2018 until 2019`}>
                       <time dateTime="2018"></time>
                       <span aria-hidden="true">2018 — 2020</span>
                       <time dateTime="2020"></time>
@@ -273,8 +273,8 @@ export default function Home() {
                 <div className="flex flex-auto flex-wrap gap-x-2">
                   <p className="w-full flex-none text-sm font-medium text-white">Mercado Libre Colombia</p>
                   <div className="md:flex justify-between w-full">
-                    <p className="text-xs text-white">Software Developer - Java</p>
-                    <p className="ml-auto text-xs text-white" aria-label={`2024 until present`}>
+                    <p className="text-xs text-white/60">Software Developer - Java</p>
+                    <p className="ml-auto text-xs text-white/60" aria-label={`2024 until present`}>
                       <time dateTime="2024"></time>
                       <span aria-hidden="true">2024 — Presente</span>
                       <time dateTime="Presente"></time>
@@ -293,8 +293,8 @@ export default function Home() {
                 <div className="flex flex-auto flex-wrap gap-x-2">
                   <p className="w-full flex-none text-sm font-medium text-white">Espectrosoft</p>
                   <div className="md:flex justify-between w-full">
-                    <p className="text-xs text-white">Software Developer - NodeJS</p>
-                    <p className="ml-auto text-xs text-white" aria-label={`2022 until 2024`}>
+                    <p className="text-xs text-white/60">Software Developer - NodeJS</p>
+                    <p className="ml-auto text-xs text-white/60" aria-label={`2022 until 2024`}>
                       <time dateTime="2022"></time>
                       <span aria-hidden="true">2022 — 2024</span>
                       <time dateTime="2024"></time>

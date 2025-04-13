@@ -42,7 +42,7 @@ export const Header = () => {
 			</div>
 
 			<header className="flex relative md:mb-32 items-center justify-between max-md:block mb-20 header-animation">
-				<div className="flex w-full justify-between mx-2 lg:w-56">
+				<div className="flex w-full justify-between lg:w-56">
 					<Link href={"/"}><img src="/logo.png" alt='logo' className="w-48 max-md:m-auto max-md:mb-8 home cursor-pointer" /></Link>
 
 					<div className="pointer-events-auto lg:hidden flex max-md:block" data-headlessui-state="open">

@@ -11,14 +11,17 @@ export const metadata: Metadata = {
   keywords: ["Santiago Baron Zuleta", "Software Developer", "santiago", "baron", "zuleta", "santiagobazul@hotmail.com", "baron zuleta"],
   authors: [{ name: "Santiago Baron Zuleta" }],
   creator: "Santiago Baron Zuleta",
+  icons: {
+    icon: "/icon.ico",
+  },
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <ViewTransitions>
       <Providers>
-        <html lang="es" className="bg-degrade-black font-poppins">
-          <body className={`antialiased container bg-dark-blue border-black-700 border-x-1 py-10 p-24 max-md:p-7 min-h-screen relative`}>
+        <html lang="es" className="bg-black-900 font-poppins">
+          <body className={`antialiased container bg-black-800 border-black-700 border-x-1 py-10 p-24 max-md:p-7 min-h-screen relative`}>
             <div id="root">
               <Header></Header>
               <div className="relative z-10">

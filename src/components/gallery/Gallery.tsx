@@ -2,10 +2,9 @@
 
 import { getDate } from '@/utils/getDate';
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import Masonry from 'react-masonry-css';
-import { motion, AnimatePresence } from "framer-motion";
 
 const breakpointColumnsObj = {
     default: 3,
@@ -56,40 +55,36 @@ const Gallery = () => {
         getNextPageParam: (lastPage) => lastPage.next_cursor ?? undefined,
     });
 
-    const [direction, setDirection] = useState<"left" | "right">("right");
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-    const allImages: CloudinaryImage[] =
-        data?.pages.flatMap((page) =>
-            (page.resources as CloudinaryImage[]).filter((img) => img.resource_type === 'image')
+    const allImages: CloudinaryImage[] = useMemo(() => {
+        return data?.pages.flatMap((page) =>
+          (page.resources as CloudinaryImage[]).filter((img) => img.resource_type === 'image')
         ) || [];
+      }, [data]);
 
     const selectedImage = selectedIndex !== null ? allImages[selectedIndex] : null;
 
     const closeModal = () => setSelectedIndex(null);
 
-    const goToNext = () => {
+    const goToNext = useCallback(() => {
         if (selectedIndex !== null && selectedIndex < allImages.length - 1) {
-            setDirection("right");
             setSelectedIndex(selectedIndex + 1);
         }
-    };
+      }, [selectedIndex, allImages.length]);
 
-    const goToPrev = () => {
+      const goToPrev = useCallback(() => {
         if (selectedIndex !== null && selectedIndex > 0) {
-            setDirection("left");
             setSelectedIndex(selectedIndex - 1);
         }
-    };
+      }, [selectedIndex]);
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             if (selectedIndex === null) return;
 
             if (e.key === 'ArrowRight') {
-                setDirection("left");
                 goToNext();
             } else if (e.key === 'ArrowLeft') {
-                setDirection("right");
                 goToPrev();
             } else if (e.key === 'Escape') {
                 closeModal();
@@ -100,7 +95,7 @@ const Gallery = () => {
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, [selectedIndex, allImages]);
+    }, [selectedIndex, allImages, goToNext, goToPrev]);
 
     useEffect(() => {
         if (selectedIndex === null) return;
@@ -123,10 +118,8 @@ const Gallery = () => {
 
             if (Math.abs(deltaX) > 50) {
                 if (deltaX > 0) {
-                    // deslizó a la izquierda
                     goToNext();
                 } else {
-                    // deslizó a la derecha
                     goToPrev();
                 }
             }
@@ -149,7 +142,7 @@ const Gallery = () => {
                 modalElement.removeEventListener('touchend', handleTouchEnd);
             }
         };
-    }, [selectedIndex]);
+    }, [selectedIndex, goToNext, goToPrev]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -186,7 +179,7 @@ const Gallery = () => {
                 columnClassName="pl-4"
             >
                 {data?.pages.map((page) =>
-                    page.resources.map((image: any) =>
+                    page.resources.map((image: CloudinaryImage) =>
                         image.resource_type === 'image' ? (
                             <div key={image.asset_id} className="relative group cursor-pointer">
                                 <img
@@ -240,20 +233,13 @@ const Gallery = () => {
                             </button>
                         )}
                         {/* Imagen ampliada */}
-                        <div className="col-span-12 md:col-span-8 flex items-center justify-center bg-black"
-                        onClick={(e) => e.stopPropagation()}>
-                            <AnimatePresence mode="wait">
-                                <motion.img
-                                    key={selectedImage.asset_id}
-                                    src={selectedImage.secure_url}
-                                    alt="gallery image"
-                                    className="rounded-xl max-w-full max-h-[80vh] object-contain"
-                                    initial={{ opacity: 0, x: direction === "right" ? 100 : -100 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    exit={{ opacity: 0, x: direction === "right" ? -100 : 100 }}
-                                    transition={{ duration: 0.3 }}
-                                />
-                            </AnimatePresence>
+                        <div className="col-span-12 md:col-span-8 flex items-center justify-center bg-black">
+                            <img
+                                src={selectedImage.secure_url}
+                                alt={selectedImage.public_id}
+                                className="lg:max-h-[80vh] max-h-[80vh] object-contain rounded-lg"
+                                onClick={(e) => e.stopPropagation()}
+                            />
                         </div>
 
                         {selectedImage.context && (
