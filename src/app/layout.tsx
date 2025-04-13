@@ -4,6 +4,7 @@ import { ViewTransitions } from 'next-view-transitions';
 import { Header } from "@/components/navigation/Header";
 import { Footer } from "@/components/navigation/Footer";
 import { Providers } from "@/lib/react-query-client";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Santiago Baron Zuleta - Software Developer",
@@ -21,6 +22,18 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
     <ViewTransitions>
       <Providers>
         <html lang="es" className="bg-black-900 font-poppins">
+          <head>
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-CH99VXQZ7P"></Script>
+            <Script id="google-analytics">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-CH99VXQZ7P');
+              `}
+            </Script>
+          </head>
           <body className={`antialiased container bg-black-800 border-black-700 border-x-1 py-10 p-24 max-md:p-7 min-h-screen relative`}>
             <div id="root">
               <Header></Header>
