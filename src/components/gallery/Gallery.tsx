@@ -1,6 +1,7 @@
 'use client';
 
 import { getDate } from '@/utils/getDate';
+import { sendGTMEvent } from '@next/third-parties/google';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
@@ -194,6 +195,7 @@ const Gallery = () => {
                                     className="w-full rounded-lg md:mb-4 sm:mb-4 mb-6"
                                     onClick={() => {
                                         const index = allImages.findIndex((img) => img.asset_id === image.asset_id);
+                                        sendGTMEvent({ event: 'buttonClicked', value: 'Image opened' });
                                         setSelectedIndex(index);
                                     }}
                                 />
