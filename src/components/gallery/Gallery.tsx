@@ -145,6 +145,12 @@ const Gallery = () => {
     }, [selectedIndex, goToNext, goToPrev]);
 
     useEffect(() => {
+        if (!isFetchingNextPage && hasNextPage && selectedImage && selectedIndex === allImages.length - 1) {
+          fetchNextPage();
+        }
+      }, [selectedIndex, allImages.length, selectedImage, hasNextPage, isFetchingNextPage, fetchNextPage]);
+
+    useEffect(() => {
         const handleScroll = () => {
             if (
                 window.innerHeight + window.scrollY >= document.body.offsetHeight - 300 &&
