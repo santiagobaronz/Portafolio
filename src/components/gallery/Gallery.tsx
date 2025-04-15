@@ -214,7 +214,7 @@ const Gallery = () => {
                 </div>
             )}
 
-            {!hasNextPage && (
+            {!hasNextPage && status === 'success' && (
                 <div className='flex items-center justify-center w-full h-full bg-gray-hover rounded-lg text-center py-5 text-gray mt-4'>
                     <p className='px-10'>Has alcanzado el final de la colección de fotografías.</p>
                 </div>

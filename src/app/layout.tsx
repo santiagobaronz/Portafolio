@@ -6,6 +6,7 @@ import { Footer } from "@/components/navigation/Footer";
 import { Providers } from "@/lib/react-query-client";
 import Script from "next/script";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Santiago Baron Zuleta - Software Developer",
@@ -42,6 +43,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
               <div className="relative z-10">
                 {children}
               </div>
+              <Analytics />
               <Footer></Footer>
             </div>
           </body>
