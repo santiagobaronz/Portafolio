@@ -11,11 +11,43 @@ import { Analytics } from "@vercel/analytics/next";
 export const metadata: Metadata = {
   title: "Santiago Baron Zuleta - Software Developer",
   description: "Mi sitio web con información sobre mi experiencia, proyectos, galería y contacto.",
-  keywords: ["Santiago Baron Zuleta", "Software Developer", "santiago", "baron", "zuleta", "santiagobazul@hotmail.com", "baron zuleta"],
-  authors: [{ name: "Santiago Baron Zuleta" }],
+  keywords: [
+    "Santiago Baron",
+    "Santiago Baron Zuleta",
+    "Software Developer",
+    "Developer",
+    "Desarrollador de Software",
+    "Next.js",
+    "Node.js",
+    "Java",
+    "Spring Boot",
+    "Santiago",
+    "Baron",
+    "Baron Zuleta",
+    "Portafolio",
+    "Zuleta",
+    "santiagobazul@hotmail.com"
+  ],
+  authors: [{ name: "Santiago Baron Zuleta", url: "https://santiagobaron.co" }],
   creator: "Santiago Baron Zuleta",
+  publisher: "Santiago Baron Zuleta",
+  robots: "index, follow",
   icons: {
     icon: "/icon.ico",
+  },
+  openGraph: {
+    title: "Santiago Baron Zuleta - Software Developer",
+    description: "Mi sitio web con información sobre mi experiencia, proyectos, galería y contacto.",
+    url: "https:/santiagobaron.co",
+    siteName: "Santiago Baron Zuleta",
+    locale: "es_CO",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Santiago Baron Zuleta - Software Developer",
+    description: "Mi sitio web con información sobre mi experiencia, proyectos, galería y contacto.",
+    creator: "@santiagobaronz",
   },
 };
 
@@ -35,6 +67,25 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
                 gtag('config', 'G-93BBNKQJEV');
               `}
             </Script>
+
+            <Script
+              id="jsonld-person"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "Person",
+                  name: "Santiago Baron Zuleta",
+                  jobTitle: "Software Developer",
+                  url: "https://santiagobaron.co",
+                  sameAs: [
+                    "https://github.com/santiagobaronz",
+                    "https://www.linkedin.com/in/santiagobaronz/",
+                  ],
+                  image: "https://santiagobaron.co/santiago.jpg",
+                }),
+              }}
+            />
           </head>
           <body className={`antialiased container bg-black-800 border-black-700 border-x-1 py-10 p-24 max-md:p-7 min-h-screen relative`}>
             <div id="root">
